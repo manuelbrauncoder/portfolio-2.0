@@ -34,12 +34,58 @@ $content-limit: 1920px;
     gap: $g;
 }
 
+.hover-transition {
+    transition: 125ms ease-out;
+}
+
 .primary-btn {
     @include font-karla($fs: 1.125rem, $fw: 400);
     @include dFlex($g: 0.625rem);
+    @extend .hover-transition;
     border: 1px solid white;
     border-radius: 100vw;
     background-color: transparent;
     color: white;
     padding: 0.8rem 1.5rem;
+    cursor: pointer;
+    overflow: hidden;
+    &:hover{
+        border: 1px solid $color-v2-green-100;
+    }
+    &:hover span {
+        color: $color-v2-green-100;
+        animation: 5s move-font infinite linear;
+    }
 }
+
+@keyframes move-font{
+    0%{
+        transform: translateX(0);
+    }
+
+    50%{
+        transform: translateX(-200%);
+    }
+
+    51%{
+        transform: translateX(200%);
+        opacity: 0;
+    }
+
+    52% {
+        opacity: 1;
+    }
+
+    100%{
+        transform: translateX(0);
+    }
+}
+
+.hover-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 100%;
+    background-color: $color-v2-green-100;
+    border: unset;
+}
+

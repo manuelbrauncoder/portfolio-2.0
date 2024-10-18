@@ -18,12 +18,12 @@
     .center {
         @include dFlex($fd: column);
 
-        h3{
+        h3 {
             @include font-fira-code($fs: 40px, $fw: 400);
             color: $color-not-white;
         }
-    
-        h1{
+
+        h1 {
             @include font-karla($fs: 128px, $fw: 700);
             color: $color-not-white;
             margin-top: 12px;
@@ -42,7 +42,7 @@
     left: 96px;
     @include dFlex($fd: column, $g: 10px);
 
-    .line{
+    .line {
         width: 1px;
         height: 240px;
         border: unset;
@@ -50,10 +50,29 @@
     }
 
     .arrow {
+        @include dFlex();
         width: 30px;
         height: 48px;
         border: 1px solid $color-v2-green-100;
         border-radius: 100vw;
+
+        svg{
+            animation: 1.2s move-arrow infinite ease-in-out;
+        }
+    }
+}
+
+@keyframes move-arrow {
+    0%{
+        transform: translateY(-3px);
+    }
+
+    50%{
+        transform: translateY(3px);
+    }
+
+    100%{
+        transform: translateY(-3px);
     }
 }
 
@@ -62,18 +81,55 @@
     bottom: 0;
     right: 96px;
     @include dFlex($fd: column, $g: 10px);
-    a{
 
+    a {
+        @include font-karla($fs: 18px, $fw: 400);
+        color: white;
+        writing-mode: vertical-rl;
+        transform: rotate(180deg);
+        text-decoration: none;
+        cursor: pointer;
+        @extend .hover-transition;
+        &:hover{
+            color: $color-v2-green-100;
+            @extend .hover-transition;
+        }
     }
 
-    img {
-
+    svg:hover path {
+        fill: white;
+        @extend .hover-transition;
     }
+
+    svg path {
+        @extend .hover-transition;
+    }
+
 
     .line {
         width: 1px;
         height: 186px;
         border: unset;
         background-color: white;
+    }
+
+    .svg-wrapper {
+        position: relative;
+        cursor: pointer;
+        
+        &:hover .dot {
+            display: block;
+            @extend .hover-transition;
+        }
+    }
+
+    .dot {
+        @extend .hover-dot;
+        position: absolute;
+        top: 50%;
+        right: 0;
+        transform: translate(10px, -50%);
+        display: none;
+        transition: 125ms ease-out;
     }
 }
