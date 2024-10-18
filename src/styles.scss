@@ -10,6 +10,8 @@ $color-v2-green-10: #3DCFB61A;
 $color-not-white: #D9D9D9;
 $color-green-bg: #08463b;
 $color-black-bg: #1c1c1c;
+$color-blur-bg: #FFFFFF1F;
+
 
 $content-limit: 1920px;
 
@@ -81,7 +83,7 @@ $content-limit: 1920px;
     }
 }
 
-.hover-dot {
+.green-dot {
     width: 8px;
     height: 8px;
     border-radius: 100%;

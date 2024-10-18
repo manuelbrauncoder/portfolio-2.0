@@ -124,7 +124,7 @@
     }
 
     .dot {
-        @extend .hover-dot;
+        @extend .green-dot;
         position: absolute;
         top: 50%;
         right: 0;
@@ -133,3 +133,41 @@
         transition: 125ms ease-out;
     }
 }
+
+.marquee {
+    transform: rotate(-2deg);
+    overflow: hidden;
+    position: absolute;
+    left: 0;
+    bottom: 62px;
+    width: 100%;
+    height: 62px;
+    background-color: $color-blur-bg;
+    backdrop-filter: blur(5.300000190734863px);
+    display: flex;
+    gap: 48px;
+    .scroll-one{
+        animation: loop 30s linear infinite;
+        @include dFlex($jc: space-around, $g: 48px);
+        overflow: hidden;
+        flex-shrink: 0;
+    }
+    .scroll-two{
+        animation: loop 30s linear infinite;
+        @include dFlex($jc: space-around, $g: 48px);
+        overflow: hidden;
+        flex-shrink: 0;
+    }
+    span{
+        @include font-karla($fs: 32px, $fw: 400);
+        color: $color-v2-green-100;
+        letter-spacing: 2px;
+        white-space: nowrap;
+    }
+}
+
+@keyframes loop {
+    0% {transform: translateX(0%);}
+    100% {transform: translateX(calc(-100% - 48px));}
+}
+
