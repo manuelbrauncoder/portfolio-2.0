@@ -4,3 +4,42 @@
     padding: 0;
 }
 
+$color-v2-green-100: #3DCFB6;
+$color-v2-green-50: #3DCFB680;
+$color-v2-green-10: #3DCFB61A;
+$color-not-white: #D9D9D9;
+$color-green-bg: #08463b;
+$color-black-bg: #1c1c1c;
+
+$content-limit: 1920px;
+
+
+@mixin font-fira-code($fs: 1.5rem, $fw: 400){
+    font-family: 'Fira Code';
+    font-size: $fs;
+    font-weight: $fw;
+}
+
+@mixin font-karla($fs: 1.5rem, $fw: 400){
+    font-family: 'Karla';
+    font-size: $fs;
+    font-weight: $fw;
+}
+
+@mixin dFlex($fd: row, $jc: center, $ai: center, $g: 0){
+    display: flex;
+    flex-direction: $fd;
+    justify-content: $jc;
+    align-items: $ai;
+    gap: $g;
+}
+
+.primary-btn {
+    @include font-karla($fs: 1.125rem, $fw: 400);
+    @include dFlex($g: 0.625rem);
+    border: 1px solid white;
+    border-radius: 100vw;
+    background-color: transparent;
+    color: white;
+    padding: 0.8rem 1.5rem;
+}

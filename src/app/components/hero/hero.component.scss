@@ -1,0 +1,79 @@
+@use '../../../styles.scss' as *;
+
+.content-bg {
+    background: linear-gradient(45deg, $color-black-bg, $color-black-bg, $color-green-bg);
+}
+
+.hero-content {
+    position: relative;
+    @include dFlex();
+    height: 100dvh;
+    width: 100%;
+    max-width: $content-limit;
+    margin: 0 auto;
+    padding: 120px 0 0 0;
+    border-right: 1px solid white;
+    border-left: 1px solid white;
+
+    .center {
+        @include dFlex($fd: column);
+
+        h3{
+            @include font-fira-code($fs: 40px, $fw: 400);
+            color: $color-not-white;
+        }
+    
+        h1{
+            @include font-karla($fs: 128px, $fw: 700);
+            color: $color-not-white;
+            margin-top: 12px;
+        }
+
+        .btns {
+            @include dFlex($g: 48px);
+            margin-top: 40px;
+        }
+    }
+}
+
+.left-line {
+    position: absolute;
+    bottom: 0;
+    left: 96px;
+    @include dFlex($fd: column, $g: 10px);
+
+    .line{
+        width: 1px;
+        height: 240px;
+        border: unset;
+        background-color: $color-v2-green-100;
+    }
+
+    .arrow {
+        width: 30px;
+        height: 48px;
+        border: 1px solid $color-v2-green-100;
+        border-radius: 100vw;
+    }
+}
+
+.right-line {
+    position: absolute;
+    bottom: 0;
+    right: 96px;
+    @include dFlex($fd: column, $g: 10px);
+    a{
+
+    }
+
+    img {
+
+    }
+
+    .line {
+        width: 1px;
+        height: 186px;
+        border: unset;
+        background-color: white;
+    }
+}
