@@ -1,0 +1,16 @@
+@use '../../../styles.scss' as *;
+
+header{
+    @include dFlex($jc: space-between);
+    max-width: $content-limit;
+    margin: 0 auto;
+    padding: 0 96px;
+    height: 100%;
+    nav{
+        @include dFlex($jc: flex-start, $g: 24px);
+        a{
+            @include font-fira-code($fs: 20px, $fw: 400);
+            letter-spacing: -3%;
+        }
+    }
+}

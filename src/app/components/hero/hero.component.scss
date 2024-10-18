@@ -11,7 +11,7 @@
     width: 100%;
     max-width: $content-limit;
     margin: 0 auto;
-    padding: 120px 0 0 0;
+    padding: 100px 0 0 0;
     border-right: 1px solid white;
     border-left: 1px solid white;
 
@@ -56,22 +56,22 @@
         border: 1px solid $color-v2-green-100;
         border-radius: 100vw;
 
-        svg{
+        svg {
             animation: 1.2s move-arrow infinite ease-in-out;
         }
     }
 }
 
 @keyframes move-arrow {
-    0%{
+    0% {
         transform: translateY(-3px);
     }
 
-    50%{
+    50% {
         transform: translateY(3px);
     }
 
-    100%{
+    100% {
         transform: translateY(-3px);
     }
 }
@@ -90,7 +90,8 @@
         text-decoration: none;
         cursor: pointer;
         @extend .hover-transition;
-        &:hover{
+
+        &:hover {
             color: $color-v2-green-100;
             @extend .hover-transition;
         }
@@ -116,7 +117,7 @@
     .svg-wrapper {
         position: relative;
         cursor: pointer;
-        
+
         &:hover .dot {
             display: block;
             @extend .hover-transition;
@@ -146,19 +147,22 @@
     backdrop-filter: blur(5.300000190734863px);
     display: flex;
     gap: 48px;
-    .scroll-one{
+
+    .scroll-one {
         animation: loop 30s linear infinite;
         @include dFlex($jc: space-around, $g: 48px);
         overflow: hidden;
         flex-shrink: 0;
     }
-    .scroll-two{
+
+    .scroll-two {
         animation: loop 30s linear infinite;
         @include dFlex($jc: space-around, $g: 48px);
         overflow: hidden;
         flex-shrink: 0;
     }
-    span{
+
+    span {
         @include font-karla($fs: 32px, $fw: 400);
         color: $color-v2-green-100;
         letter-spacing: 2px;
@@ -167,7 +171,11 @@
 }
 
 @keyframes loop {
-    0% {transform: translateX(0%);}
-    100% {transform: translateX(calc(-100% - 48px));}
-}
+    0% {
+        transform: translateX(0%);
+    }
 
+    100% {
+        transform: translateX(calc(-100% - 48px));
+    }
+}
