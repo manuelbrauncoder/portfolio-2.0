@@ -4,7 +4,7 @@
             <h3>Portfolio</h3>
             <h1>Featured Projects</h1>
             <p>Explore a selection of my work here - Interact with projects to see my skills in action.</p>
-            <div class="project-facts border-top">
+            <div class="project-facts border-top" (mouseover)="onMouseOver('dabubble')" (mouseleave)="onMouseLeave()">
                 <span class="title">DA Bubble</span>
                 <div class="tech-stack">
                     <span class="skill">Angular</span>
@@ -18,7 +18,7 @@
                     <span class="skill">SCSS</span>
                 </div>
             </div>
-            <div class="project-facts border-top">
+            <div class="project-facts border-top" (mouseover)="onMouseOver('join')" (mouseleave)="onMouseLeave()">
                 <span class="title">Join</span>
                 <div class="tech-stack">
                     <span class="skill">Angular</span>
@@ -32,7 +32,8 @@
                     <span class="skill">SCSS</span>
                 </div>
             </div>
-            <div class="project-facts border-top border-bottom">
+            <div class="project-facts border-top border-bottom" (mouseover)="onMouseOver('epl')"
+                (mouseleave)="onMouseLeave()">
                 <span class="title">El Pollo Loco</span>
                 <div class="tech-stack">
                     <span class="skill">JavaScript</span>
@@ -43,6 +44,40 @@
                 </div>
             </div>
         </div>
+
+        @if (showImage) {
+            <div class="image-container">
+                @if (showProjectImage === 'dabubble') {
+                <div class="image-wrapper">
+                    <img class="project-img" src="assets/img/portfolio-dabubble.png" alt="messenger image">
+                    <img class="lines" src="assets/img/portfolio-diagonal-lines.png" alt="image of green lines">
+                </div>
+    
+                }
+                @if (showProjectImage === 'join') {
+                <div class="image-wrapper">
+                    <img class="project-img" src="assets/img/portfolio-join.png" alt="messenger image">
+                    <img class="lines" src="assets/img/portfolio-diagonal-lines.png" alt="image of green lines">
+                </div>
+    
+                }
+                @if (showProjectImage === 'epl') {
+                <div class="image-wrapper">
+                    <img class="project-img" src="assets/img/portfolio-epl.png" alt="messenger image">
+                    <img class="lines" src="assets/img/portfolio-diagonal-lines.png" alt="image of green lines">
+                </div>
+    
+                }
+            </div>
+        }
+        
+
+
+
+
+
+
+
 
     </div>
 </div>
