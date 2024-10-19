@@ -1,7 +1,8 @@
 @use '../../../styles.scss' as *;
 
 .content-bg {
-    background: linear-gradient(45deg, $color-black-bg, $color-black-bg, $color-green-bg);
+    background: linear-gradient(180deg, rgba(28, 28, 28, 0) 0%, $color-black-bg 100%),
+    linear-gradient(45deg, $color-black-bg 30%, $color-green-bg 70%);
 }
 
 .hero-content {
@@ -11,7 +12,7 @@
     width: 100%;
     max-width: $content-limit;
     margin: 0 auto;
-    padding: 100px 0 0 0;
+    padding: 100px 96px 0 96px;
     border-right: 1px solid white;
     border-left: 1px solid white;
 
