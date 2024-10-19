@@ -1,9 +1,13 @@
 <header>
     <nav>
-        <div class="toggle"></div>
-        <a href="">About me</a>
-        <a href="">Skills</a>
-        <a href="">Projects</a>
+        <div class="toggle">
+            <span (click)="toggleLanguage('en')" [ngClass]="language === 'en' ? 'activelg' : 'lg'">EN</span>
+            <span (click)="toggleLanguage('de')" [ngClass]="language === 'de' ? 'activelg' : 'lg'">DE</span>
+            <div [ngClass]="language === 'en' ? 'left' : 'right'" class="slider"></div>
+        </div>
+        <span class="link">About me</span>
+        <span class="link">Skills</span>
+        <span class="link">Projects</span>
     </nav>
     <div class="logo">
         <span>Manuel</span>

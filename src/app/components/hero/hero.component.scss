@@ -119,8 +119,7 @@
         cursor: pointer;
 
         &:hover .dot {
-            display: block;
-            @extend .hover-transition;
+            opacity: 1;
         }
     }
 
@@ -130,8 +129,8 @@
         top: 50%;
         right: 0;
         transform: translate(10px, -50%);
-        display: none;
-        transition: 125ms ease-out;
+        opacity: 0;
+        transition: opacity 125ms ease-out;
     }
 }
 
