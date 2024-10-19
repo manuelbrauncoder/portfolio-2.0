@@ -42,7 +42,7 @@
                 color: $color-v2-green-100;
             }
 
-            .sub-headline {
+            .subheadline {
                 @include font-karla($fs: 18px, $fw: 400);
                 color: white;
                 max-width: 55ch;
