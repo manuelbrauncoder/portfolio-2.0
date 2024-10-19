@@ -69,6 +69,7 @@
         flex: 2;
         max-width: 640px;
         margin-top: 28px;
+        transform: translateY(70px);
 
         .skill {
             @include dFlex($fd: column, $g: 8px);

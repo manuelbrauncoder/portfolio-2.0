@@ -18,6 +18,7 @@
 
     .center {
         @include dFlex($fd: column);
+        margin-bottom: 100px;
 
         h3 {
             @include font-fira-code($fs: 40px, $fw: 400);
