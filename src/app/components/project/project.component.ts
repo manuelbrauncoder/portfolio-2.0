@@ -28,11 +28,43 @@ export class ProjectComponent implements OnInit, OnChanges {
   }
 
   nextProject(){
+    switch (this.currentProject) {
+      case 'dabubble':
+        this.setCurrentProject('join');
+        this.currentProject = 'join';
+        break;
+        case 'join':
+        this.setCurrentProject('epl');
+        this.currentProject = 'epl';
+        break;
+        case 'epl':
+        this.setCurrentProject('dabubble');
+        this.currentProject = 'dabubble';
+        break;
     
+      default:
+        break;
+    }
   }
 
   prevProject(){
-
+    switch (this.currentProject) {
+      case 'dabubble':
+        this.setCurrentProject('epl');
+        this.currentProject = 'epl';
+        break;
+        case 'join':
+        this.setCurrentProject('dabubble');
+        this.currentProject = 'dabubble';
+        break;
+        case 'epl':
+        this.setCurrentProject('join');
+        this.currentProject = 'join';
+        break;
+    
+      default:
+        break;
+    }
   }
 
 }

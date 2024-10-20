@@ -8,8 +8,6 @@
     width: 100%;
     max-width: $content-limit;
     margin: 0 auto;
-    border-right: 1px solid white;
-    border-left: 1px solid white;
     padding: 96px;
     @include dFlex($jc: space-around, $g: 16px);
 

@@ -13,8 +13,6 @@
     max-width: $content-limit;
     margin: 0 auto;
     padding: 100px 96px 0 96px;
-    border-right: 1px solid white;
-    border-left: 1px solid white;
 
     .center {
         @include dFlex($fd: column);

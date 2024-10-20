@@ -8,8 +8,6 @@
     width: 100%;
     max-width: $content-limit;
     margin: 0 auto;
-    border-right: 1px solid white;
-    border-left: 1px solid white;
     padding: 96px;
     @include dFlex($g: 16px, $jc: flex-start);
 
@@ -127,7 +125,8 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: $color-v2-green-10;
+    background-color: $color-blur-bg;
+    backdrop-filter: blur(5.300000190734863px);
 }
 
 
