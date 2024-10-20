@@ -9,3 +9,15 @@ app-header{
     height: 100px;
     z-index: 2;
 }
+
+.cursor-background {
+    background-image: url(../assets/img/cursor-background.png);
+    position: fixed;
+    z-index: 1;
+    transform: translate(-50%, -50%);
+    width: 350px;
+    height: 350px;
+    border-radius: 100%;
+    pointer-events: none;
+    background-size: cover;
+}
