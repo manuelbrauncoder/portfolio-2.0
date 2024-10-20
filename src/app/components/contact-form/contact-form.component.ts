@@ -19,8 +19,6 @@ export class ContactFormComponent {
   }
 
   onSubmit(ngForm: NgForm) {
-    console.log(this.contact);
-    
+    console.log(this.contact); 
   }
-
 }
