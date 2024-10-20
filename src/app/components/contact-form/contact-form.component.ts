@@ -14,7 +14,8 @@ export class ContactFormComponent {
   contact = {
     name: '',
     email: '',
-    message: ''
+    message: '',
+    acceptPrivacy: false
   }
 
   onSubmit(ngForm: NgForm) {

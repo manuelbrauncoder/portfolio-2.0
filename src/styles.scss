@@ -12,6 +12,8 @@ $color-not-white: #D9D9D9;
 $color-green-bg: #08463b;
 $color-black-bg: #1c1c1c;
 $color-blur-bg: #FFFFFF1F;
+$color-error-red: #EC7B7BCC;
+
 
 
 $content-limit: 1920px;
@@ -52,15 +54,17 @@ $content-limit: 1920px;
     padding: 0.8rem 1.5rem;
     cursor: pointer;
     overflow: hidden;
-    &:hover{
+    &:not(:disabled):hover {
         border: 1px solid $color-v2-green-100;
     }
-    &:hover span {
+    &:not(:disabled):hover span {
         color: $color-v2-green-100;
         animation: 5s move-font infinite linear;
     }
     &:disabled {
         cursor: not-allowed;
+        border: 1px solid $color-not-white;
+        color: $color-not-white;
     }
 }
 

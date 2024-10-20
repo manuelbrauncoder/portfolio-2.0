@@ -1,12 +1,10 @@
 <form name="contactForm" #contactForm="ngForm" (ngSubmit)="onSubmit(contactForm)">
-    <div class="input-wrapper">
-        <label for=""></label>
-        <input type="text">
-    </div>
+    
     <div class="input-wrapper">
         <label for="">What´s your name?</label>
-        <input 
-        placeholder="Your name goes here"
+        <input
+        [ngClass]="{'placeholder-error': !name.valid && name.touched}" 
+        [placeholder]="!name.valid && name.touched ? 'Oops! it seems your name is missing ' : 'Your name goes here'"
         type="text"
         id="name"
         name="name"
@@ -18,8 +16,9 @@
     </div>
     <div class="input-wrapper">
         <label for="">What´s your email?</label>
-        <input 
-        placeholder="youremail@email.com"
+        <input
+        [ngClass]="{'placeholder-error': !email.valid && email.touched}"
+        [placeholder]="!email.valid && email.touched ? 'Hoppla! your email is required' : 'youremail@email.com'"
         type="email"
         id="email"
         name="email"
@@ -31,8 +30,9 @@
     </div>
     <div class="input-wrapper">
         <label for="message">How can I help you?</label>
-        <input 
-        placeholder="Hello Manuel, I am interested in..."
+        <input
+        [ngClass]="{'placeholder-error': !message.valid && message.touched}" 
+        [placeholder]="!message.valid && message.touched ? 'What do you need to develop?' : 'Hello Manuel, I am interested in...'"
         type="text"
         id="message"
         name="message"
@@ -42,5 +42,19 @@
         #message="ngModel"
         >
     </div>
-    <button [disabled]="!contactForm.valid" type="submit" class="primary-btn">Say Hello ;)</button>
+    <div class="checkbox-wrapper">
+        <input
+        type="checkbox"
+        [(ngModel)]="contact.acceptPrivacy"
+        id="privacy"
+        name="privacy"
+        required
+        #privacy="ngModel"
+        >
+        <label for="privacy">I've read the <a href="">privacy policy </a>and agree to the processing of my data as outlined.</label>
+        @if (name.valid && email.valid && message.valid) {
+            <span class="hint">Please accept the privacy policy.</span>
+        }
+    </div>
+    <button [disabled]="!contactForm.valid" type="submit" class="primary-btn"><span>Say Hello ;)</span></button>
 </form>

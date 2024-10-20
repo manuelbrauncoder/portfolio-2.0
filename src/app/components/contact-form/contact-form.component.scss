@@ -5,7 +5,11 @@ form {
 }
 
 .input-wrapper {
-    @include dFlex($fd: column, $ai: flex-start, $jc: flex-start, $g: 16px);
+    border-top: 1px solid $color-v2-green-50;
+    width: 100%;
+    padding: 20px;
+    @include dFlex($fd: column, $ai: flex-start, $jc: flex-start, $g: 10px);
+    @extend .hover-transition;
 
     label {
         @include font-fira-code($fs: 24px, $fw: 500);
@@ -13,10 +17,83 @@ form {
     }
 
     input {
-       @include font-karla($fs: 18px, $fw: 400);
-       color: white; 
-       background: unset;
-       border: unset;
-       outline: none;
+        @include font-karla($fs: 18px, $fw: 400);
+        color: white;
+        background: unset;
+        border: unset;
+        outline: none;
+        width: 100%;
+        caret-color: $color-v2-green-100;
+    }
+
+    &:hover {
+        border-top: 1px solid $color-v2-green-100;
+        @extend .hover-transition;
+    }
+
+    &:hover ::placeholder {
+        color: white;
     }
 }
+
+.checkbox-wrapper {
+    position: relative;
+    padding: 20px;
+    border-top: 1px solid $color-v2-green-50;
+    @include dFlex($jc: flex-start, $g: 8px);
+    @extend .hover-transition;
+    label {
+        @include font-karla($fs: 15px, $fw: 400);
+        color: white;
+
+        a {
+            @include font-fira-code($fs: 15px, $fw: 400);
+            color: $color-v2-green-100;
+        }
+
+        input {
+            cursor: pointer;
+        }
+    }
+    &:hover {
+        border-top: 1px solid $color-v2-green-100;
+        @extend .hover-transition;
+    }
+}
+
+::placeholder{
+    color: $color-not-white;
+    @include font-karla($fs: 18px, $fw: 400);
+}
+
+.hint {
+    @include font-karla($fs: 14px, $fw: 400);
+    color: $color-error-red;
+    position: absolute;
+    bottom: -8px;
+    left: 20px;
+}
+
+.placeholder-error{
+    &::placeholder {
+        color: $color-error-red;
+    }
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+  border: unset;
+  -webkit-text-fill-color: white;
+  -webkit-box-shadow: 0 0 0px 1000px $color-black-bg inset;
+  transition: background-color 5000s ease-in-out 0s;
+  @include font-karla($fs: 18px, $fw: 400);
+}
+
+
