@@ -21,4 +21,10 @@ export class ContactFormComponent {
   onSubmit(ngForm: NgForm) {
     console.log(this.contact); 
   }
+
+  toggleCheckbox(){
+    this.contact.acceptPrivacy = !this.contact.acceptPrivacy;
+    console.log(this.contact.acceptPrivacy);
+    
+  }
 }

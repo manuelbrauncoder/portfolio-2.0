@@ -32,7 +32,6 @@
                 color: $color-v2-green-100;
             }
 
-
             .subheadline {
                 @include font-karla($fs: 18px, $fw: 400);
                 color: $color-not-white;
@@ -92,13 +91,5 @@
                 text-align: center;
             }
         }
-
-
     }
-
-
-
-
-
-
 }

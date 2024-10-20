@@ -43,6 +43,13 @@
         >
     </div>
     <div class="checkbox-wrapper">
+        <div (click)="toggleCheckbox()" class="custom-check-icon">
+            @if (privacy.valid) {
+                <img src="assets/icons/contact-check.svg" alt="custom-check-icon">
+            } @else {
+                <img src="assets/icons/contact-uncheck.svg" alt="custom-check-icon-uncheck">
+            }
+        </div>
         <input
         type="checkbox"
         [(ngModel)]="contact.acceptPrivacy"
@@ -52,7 +59,7 @@
         #privacy="ngModel"
         >
         <label for="privacy">I've read the <a href="">privacy policy </a>and agree to the processing of my data as outlined.</label>
-        @if (name.valid && email.valid && message.valid) {
+        @if (name.valid && email.valid && message.valid && !privacy.valid) {
             <span class="hint">Please accept the privacy policy.</span>
         }
     </div>

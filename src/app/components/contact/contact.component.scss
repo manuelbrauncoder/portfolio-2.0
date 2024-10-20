@@ -8,7 +8,7 @@
     max-width: $content-limit;
     margin: 0 auto;
     padding: 96px;
-    @include dFlex($jc: space-around, $g: 16px);
+    @include dFlex($jc: space-around, $g: 16px, $ai: flex-start);
     border-left: 1px solid white;
     border-right: 1px solid white;
 
@@ -42,5 +42,4 @@
             }
         }
     }
-
 }

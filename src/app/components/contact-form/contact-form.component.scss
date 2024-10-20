@@ -2,6 +2,10 @@
 
 form {
     @include dFlex($fd: column, $ai: flex-start, $jc: flex-start, $g: 40px);
+
+    button {
+        margin: auto;
+    }
 }
 
 .input-wrapper {
@@ -42,6 +46,24 @@ form {
     border-top: 1px solid $color-v2-green-50;
     @include dFlex($jc: flex-start, $g: 8px);
     @extend .hover-transition;
+
+    .custom-check-icon {
+        position: absolute;
+        width: 24px;
+        height: 24px;
+        border-radius: 100%;
+        @include dFlex();
+        cursor: pointer;
+        transform: translateX(-5px);
+        z-index: 2;
+        @extend .hover-transition;
+
+        &:hover {
+            background-color: $color-v2-green-30;
+            @extend .hover-transition;
+        }
+    }
+
     label {
         @include font-karla($fs: 15px, $fw: 400);
         color: white;
@@ -49,19 +71,22 @@ form {
         a {
             @include font-fira-code($fs: 15px, $fw: 400);
             color: $color-v2-green-100;
-        }
-
-        input {
-            cursor: pointer;
-        }
+        }   
     }
+
+    input {
+        cursor: pointer;
+        z-index: 1;
+        opacity: 0;
+    }
+
     &:hover {
         border-top: 1px solid $color-v2-green-100;
         @extend .hover-transition;
     }
 }
 
-::placeholder{
+::placeholder {
     color: $color-not-white;
     @include font-karla($fs: 18px, $fw: 400);
 }
@@ -74,7 +99,7 @@ form {
     left: 20px;
 }
 
-.placeholder-error{
+.placeholder-error {
     &::placeholder {
         color: $color-error-red;
     }
@@ -89,11 +114,9 @@ textarea:-webkit-autofill:focus,
 select:-webkit-autofill,
 select:-webkit-autofill:hover,
 select:-webkit-autofill:focus {
-  border: unset;
-  -webkit-text-fill-color: white;
-  -webkit-box-shadow: 0 0 0px 1000px $color-black-bg inset;
-  transition: background-color 5000s ease-in-out 0s;
-  @include font-karla($fs: 18px, $fw: 400);
+    border: unset;
+    -webkit-text-fill-color: white;
+    -webkit-box-shadow: 0 0 0px 1000px $color-black-bg inset;
+    transition: background-color 5000s ease-in-out 0s;
+    @include font-karla($fs: 18px, $fw: 400);
 }
-
-

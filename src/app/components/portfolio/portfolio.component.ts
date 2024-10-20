@@ -1,28 +1,38 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
-import { fadeIn } from "../../shared/animations";
+import { fadeIn, slideIn } from "../../shared/animations";
+import { ProjectComponent } from "../project/project.component";
 
 @Component({
   selector: 'app-portfolio',
   standalone: true,
-  imports: [CommonModule],
-  animations: [fadeIn],
+  imports: [CommonModule, ProjectComponent],
+  animations: [fadeIn, slideIn],
   templateUrl: './portfolio.component.html',
   styleUrl: './portfolio.component.scss'
 })
 export class PortfolioComponent {
-
+  showDetailView = false;
+  currentProject: 'dabubble' | 'join' | 'epl' = 'dabubble'
   showProjectImage: 'dabubble' | 'join' | 'epl' | '' = '';
-  showImage = false;
 
-  onMouseOver(project: 'dabubble' | 'join' | 'epl' | ''){
-    this.showProjectImage = project;
-    this.showImage = true;
+  async onMouseOver(project: 'dabubble' | 'join' | 'epl' | ''){
+      this.showProjectImage = project;
   }
 
   onMouseLeave(){
     this.showProjectImage = '';
-    this.showImage = false;
   }
+
+  openProjectDetails(project: 'dabubble' | 'join' | 'epl') {
+    this.currentProject = project;
+    this.showDetailView = true;
+  }
+
+  closeProjectDetails() {
+    this.showDetailView = false;
+  }
+
+  
 
 }
