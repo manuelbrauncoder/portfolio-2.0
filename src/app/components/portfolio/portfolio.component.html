@@ -73,8 +73,8 @@
 </div>
 
 @if (showDetailView) {
-    <div class="project-detail-view">
+    <div @fadeIn class="project-detail-view">
         <app-project [currentProject]="currentProject" />
     </div>
-    <div (click)="closeProjectDetails()" class="popup-bg"></div>
+    <div @fadeIn (click)="closeProjectDetails()" class="popup-bg"></div>
 }

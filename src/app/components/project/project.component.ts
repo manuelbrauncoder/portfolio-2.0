@@ -27,4 +27,12 @@ export class ProjectComponent implements OnInit, OnChanges {
     if(project === 'epl') this.project = epl;
   }
 
+  nextProject(){
+    
+  }
+
+  prevProject(){
+
+  }
+
 }

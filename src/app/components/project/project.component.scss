@@ -1,2 +1,73 @@
 @use '../../../styles.scss' as *;
 
+.project {
+    width: 90vw;
+    max-width: 1400px;
+    @include dFlex($jc: flex-start, $ai: flex-start, $g: 32px);
+    border-radius: 30px;
+    border: 1px solid $color-v2-green-100;
+    background: linear-gradient(55.22deg, #1C1C1C 36.26%, #08463B 93.28%);
+    padding: 80px;
+
+    .details {
+        @include dFlex($fd: column, $ai: flex-start, $jc: flex-start, $g: 40px);
+        h1 {
+            @include font-karla($fs: 128px, $fw: 700);
+            color: $color-v2-green-100;
+        }
+
+        h2 {
+            @include font-fira-code($fs: 64px, $fw: 700);
+            color: white;
+        }
+
+        h3 {
+            @include font-fira-code($fs: 24px, $fw: 700);
+            color: $color-v2-green-100;
+        }
+
+        p {
+            @include font-karla($fs: 18px, $fw: 400);
+            color: $color-not-white;
+            max-width: 60ch;
+            &:hover {
+                color: white;
+            }
+        }
+
+        .skills {
+            @include dFlex($jc: flex-start, $g: 16px);
+            img {
+                width: 24px;
+                height: 24px;
+            }
+
+            span {
+                @include font-karla($fs: 16px, $fw: 400);
+                color: $color-not-white;
+                &:hover {
+                    color: white;
+                }
+            }
+        }
+
+        .btns {
+            @include dFlex($jc: flex-start, $g: 32px);
+        }
+    }
+
+    .img-box {
+        .close-icon {
+
+        }
+
+        .project-img {
+            width: 400px;
+            height: 280px;
+        }
+
+        .text-btn {
+
+        }
+    }
+}
