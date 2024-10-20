@@ -1,0 +1,42 @@
+@use '../../../styles.scss' as *;
+
+.content-bg {
+    background-color: $color-black-bg;
+}
+
+.references-content {
+    border-left: 1px solid white;
+    border-right: 1px solid white;
+    max-width: $content-limit;
+    padding: 96px;
+    margin: 0 auto;
+    @include dFlex($fd: column, $g: 48px);
+    overflow: hidden;
+
+    h2{
+        @include font-fira-code($fs: 32px, $fw: 700);
+        color: $color-v2-green-100;
+    }
+
+    .references-wrapper{
+        @include dFlex($g: 32px);
+    }
+
+    .navigation{
+        @include dFlex($g: 20px);
+        .dot{
+            height: 8px;
+            width: 8px;
+            border: unset;
+            border-radius: 100%;
+        }
+    }
+}
+
+.dot-green{
+    background-color: $color-v2-green-100;
+}
+
+.dot-white{
+    background-color: white;
+}
