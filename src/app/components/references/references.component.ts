@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, inject, OnInit } from '@angular/core';
 import { ReferenceComponent } from "../reference/reference.component";
 
 @Component({
@@ -9,5 +9,9 @@ import { ReferenceComponent } from "../reference/reference.component";
   styleUrl: './references.component.scss'
 })
 export class ReferencesComponent {
+
+
+  
+
 
 }

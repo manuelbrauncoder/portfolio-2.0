@@ -1,1 +1,46 @@
-<p>contact-form works!</p>
+<form name="contactForm" #contactForm="ngForm" (ngSubmit)="onSubmit(contactForm)">
+    <div class="input-wrapper">
+        <label for=""></label>
+        <input type="text">
+    </div>
+    <div class="input-wrapper">
+        <label for="">What´s your name?</label>
+        <input 
+        placeholder="Your name goes here"
+        type="text"
+        id="name"
+        name="name"
+        required
+        minlength="4"
+        [(ngModel)]="contact.name"
+        #name="ngModel"
+        >
+    </div>
+    <div class="input-wrapper">
+        <label for="">What´s your email?</label>
+        <input 
+        placeholder="youremail@email.com"
+        type="email"
+        id="email"
+        name="email"
+        pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}"
+        required
+        [(ngModel)]="contact.email"
+        #email="ngModel"
+        >
+    </div>
+    <div class="input-wrapper">
+        <label for="message">How can I help you?</label>
+        <input 
+        placeholder="Hello Manuel, I am interested in..."
+        type="text"
+        id="message"
+        name="message"
+        required
+        minlength="6"
+        [(ngModel)]="contact.message"
+        #message="ngModel"
+        >
+    </div>
+    <button [disabled]="!contactForm.valid" type="submit" class="primary-btn">Say Hello ;)</button>
+</form>
