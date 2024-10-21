@@ -105,3 +105,16 @@ a{
     color: white;
 }
 
+.embla {
+    overflow: hidden;
+    max-width: 100%;
+  }
+  .embla__container {
+    display: flex;
+  }
+  .embla__slide {
+    flex: 0 0 700px;
+    min-width: 0;
+    margin-right: 32px;
+  }
+

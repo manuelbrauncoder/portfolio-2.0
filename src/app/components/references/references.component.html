@@ -1,15 +1,19 @@
 <div class="content-bg">
     <div class="references-content">
         <h2>What my colleagues say about me</h2>
-        <div class="references-wrapper">
-                <app-reference />
-                <app-reference />
-                <app-reference />
-                <app-reference />
-                <app-reference />
+        <div class="embla" emblaCarousel [options]="options" [subscribeToEvents]="subscribeToEvents"
+            (emblaChange)="onEmblaChanged($event)" [plugins]="plugins">
+            <div class="embla__container">
+                <div class="embla__slide"><app-reference /></div>
+                <div class="embla__slide"><app-reference /></div>
+                <div class="embla__slide"><app-reference /></div>
+                <div class="embla__slide"><app-reference /></div>
+                <div class="embla__slide"><app-reference /></div>
+            </div>
+
         </div>
         <div class="navigation">
-            <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <svg (click)="prev()" width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <mask id="mask0_17530_504" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="4" y="4" width="32"
                     height="32">
                     <rect x="4" y="4" width="32" height="32" fill="#D9D9D9" />
@@ -21,11 +25,13 @@
                 </g>
             </svg>
 
-            <hr class="dot dot-white">
-            <hr class="dot dot-green">
-            <hr class="dot dot-white">
+            <hr [ngClass]="activeSlide === 0 ? 'dot-green' : 'dot-white'" class="dot">
+            <hr [ngClass]="activeSlide === 1 ? 'dot-green' : 'dot-white'" class="dot">
+            <hr [ngClass]="activeSlide === 2 ? 'dot-green' : 'dot-white'" class="dot">
+            <hr [ngClass]="activeSlide === 3 ? 'dot-green' : 'dot-white'" class="dot">
+            <hr [ngClass]="activeSlide === 4 ? 'dot-green' : 'dot-white'" class="dot">
 
-            <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <svg (click)="next()" width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <mask id="mask0_17530_512" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="4" y="4" width="32"
                     height="32">
                     <rect x="4" y="4" width="32" height="32" fill="#D9D9D9" />
