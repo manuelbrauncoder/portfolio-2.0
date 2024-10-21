@@ -6,21 +6,25 @@
         <p>{{ project?.description }}</p>
         <div class="skills">
             @for (skill of project?.skills; track $index) {
-                <img src="{{ skill.imgPath }}" alt="skill icon">
-                <span>{{ skill.name }}</span>
+                <div class="skill">
+                    <img src="{{ skill.imgPath }}" alt="skill icon">
+                    <span>{{ skill.name }}</span>
+                </div>
             }
         </div>
         <div class="btns">
-            <button class="primary-btn">
+            <button class="secondary-btn">
                 <a href="{{ project?.github }}" target="_blank">Gibhub</a>
+                <img src="assets/icons/project-arrow-up-right.svg" alt="arrow icon">
             </button>
-            <button class="primary-btn">
+            <button class="secondary-btn">
                 <a href="{{ project?.link }}" target="_blank">Live Test</a>
+                <img src="assets/icons/project-arrow-up-right.svg" alt="arrow icon">
             </button>
         </div>
     </div>
     <div class="img-box">
-        <svg class="close-icon" width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <svg (click)="triggerCloseInParent()" class="close-icon" width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
             <mask id="mask0_3296_4706" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="48" height="48">
             <rect width="48" height="48" fill="#D9D9D9"/>
             </mask>
@@ -32,7 +36,7 @@
          <img class="project-img" src="{{ project?.imgPath }}" alt="project screenshot">
          <button (click)="nextProject()" class="text-btn">
             <span>Next project</span>
-            <!-- green arrow -->
+            <img src="assets/icons/project-arrow-right.svg" alt="">
          </button>
     </div>
 </div>

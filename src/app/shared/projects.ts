@@ -7,23 +7,23 @@ export const dabubble: Project = {
     skills: [
         {
             name: 'Angular',
-            imgPath: 'assets/img/skills-angular.svg'
+            imgPath: 'assets/img/skills-angular-green.svg'
         },
         {
             name: 'TypeScript',
-            imgPath: 'assets/img/skills-typescript.svg'
+            imgPath: 'assets/img/skills-typescript-green.svg'
         },
         {
             name: 'Firebase',
-            imgPath: 'assets/img/skills-firebase.svg'
+            imgPath: 'assets/img/skills-firebase-green.svg'
         },
         {
             name: 'HTML',
-            imgPath: 'assets/img/skills-html.svg'
+            imgPath: 'assets/img/skills-html-green.svg'
         },
         {
             name: 'SCSS',
-            imgPath: 'assets/img/skills-css.svg'
+            imgPath: 'assets/img/skills-css-green.svg'
         },
     ],
     link: "https://da-bubble.manuel-braun.net/login",
@@ -38,23 +38,23 @@ export const join: Project = {
     skills: [
         {
             name: 'Angular',
-            imgPath: 'assets/img/skills-angular.svg'
+            imgPath: 'assets/img/skills-angular-green.svg'
         },
         {
             name: 'TypeScript',
-            imgPath: 'assets/img/skills-typescript.svg'
+            imgPath: 'assets/img/skills-typescript-green.svg'
         },
         {
             name: 'Firebase',
-            imgPath: 'assets/img/skills-firebase.svg'
+            imgPath: 'assets/img/skills-firebase-green.svg'
         },
         {
             name: 'HTML',
-            imgPath: 'assets/img/skills-html.svg'
+            imgPath: 'assets/img/skills-html-green.svg'
         },
         {
             name: 'SCSS',
-            imgPath: 'assets/img/skills-css.svg'
+            imgPath: 'assets/img/skills-css-green.svg'
         },
     ],
     link: "https://da-bubble.manuel-braun.net/login",
@@ -69,15 +69,15 @@ export const epl: Project = {
     skills: [
         {
             name: 'JavaScript',
-            imgPath: 'assets/img/skills-javascript.svg'
+            imgPath: 'assets/img/skills-javascript-green.svg'
         },
         {
             name: 'HTML',
-            imgPath: 'assets/img/skills-html.svg'
+            imgPath: 'assets/img/skills-html-green.svg'
         },
         {
             name: 'SCSS',
-            imgPath: 'assets/img/skills-css.svg'
+            imgPath: 'assets/img/skills-css-green.svg'
         },
     ],
     link: "https://da-bubble.manuel-braun.net/login",

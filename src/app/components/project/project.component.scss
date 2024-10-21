@@ -41,19 +41,26 @@
         .skills {
             @include dFlex($jc: flex-start, $g: 16px);
 
-            img {
-                width: 24px;
-                height: 24px;
-            }
+            .skill {
+                @include dFlex($g: 4px);
 
-            span {
-                @include font-karla($fs: 16px, $fw: 400);
-                color: $color-not-white;
-
-                &:hover {
-                    color: white;
+                img {
+                    width: 24px;
+                    height: 24px;
+                }
+    
+                span {
+                    @include font-karla($fs: 16px, $fw: 400);
+                    color: $color-not-white;
+                    cursor: default;
+    
+                    &:hover {
+                        color: white;
+                    }
                 }
             }
+
+            
         }
 
         .btns {
@@ -85,6 +92,31 @@
             border-radius: 30px;
         }
 
-        .text-btn {}
+        .text-btn {
+            @include dFlex($g: 8px);
+            border: unset;
+            background-color: unset;
+            cursor: pointer;
+
+            img {
+                @extend .hover-transition;
+            }
+
+            span{
+                @include font-karla($fs: 18px, $fw: 400);
+                color: $color-v2-green-100;
+            }
+
+            &:hover{
+                span{
+                    color: white;
+                }
+
+                img {
+                    transform: translateX(5px) scale(1.3);
+                    @extend .hover-transition;
+                }
+            }
+        }
     }
 }

@@ -74,7 +74,7 @@
 
 @if (showDetailView) {
     <div @fadeIn class="project-detail-view">
-        <app-project [currentProject]="currentProject" />
+        <app-project (triggerClose)="closeProjectDetails()" [currentProject]="currentProject" />
     </div>
     <div @fadeIn (click)="closeProjectDetails()" class="popup-bg"></div>
 }

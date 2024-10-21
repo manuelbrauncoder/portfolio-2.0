@@ -1,4 +1,4 @@
-import { Component, Input, OnChanges, OnInit, SimpleChanges } from '@angular/core';
+import { Component, EventEmitter, Input, OnChanges, OnInit, Output, SimpleChanges } from '@angular/core';
 import { Project } from '../../interfaces/project.interface';
 import { dabubble, epl, join } from '../../shared/projects';
 
@@ -12,7 +12,12 @@ import { dabubble, epl, join } from '../../shared/projects';
 export class ProjectComponent implements OnInit, OnChanges {
 
   @Input() currentProject: 'dabubble' | 'join' | 'epl' = 'dabubble';
+  @Output() triggerClose = new EventEmitter();
   project: Project | null = null; 
+
+  triggerCloseInParent(){
+    this.triggerClose.emit();
+  }
 
   ngOnInit(): void {
     this.setCurrentProject(this.currentProject);
