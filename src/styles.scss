@@ -111,10 +111,11 @@ a{
   }
   .embla__container {
     display: flex;
+    padding: 32px 0;
   }
   .embla__slide {
     flex: 0 0 700px;
     min-width: 0;
-    margin-right: 32px;
+    margin-right: 48px;
   }
 

@@ -12,31 +12,63 @@
     overflow: hidden;
 
 
-    h2{
+    h2 {
         @include font-fira-code($fs: 32px, $fw: 700);
         color: $color-v2-green-100;
     }
 
-    .references-wrapper{
+    .references-wrapper {
         @include dFlex($g: 32px);
     }
 
-    .navigation{
+    .navigation {
         @include dFlex($g: 20px);
-        .dot{
-            height: 8px;
-            width: 8px;
+
+        .dot {
             border: unset;
             border-radius: 100%;
+        }
+
+        svg:first-of-type {
+            cursor: pointer;
+            @extend .hover-transition;
+
+            &:hover {
+                @extend .hover-transition;
+                transform: translateX(-5px) scale(1.3);
+
+                path,
+                rect {
+                    fill: $color-v2-green-100;
+                }
+            }
+        }
+
+        svg:last-of-type {
+            cursor: pointer;
+            @extend .hover-transition;
+
+            &:hover {
+                @extend .hover-transition;
+                transform: translateX(5px) scale(1.3);
+
+                path,
+                rect {
+                    fill: $color-v2-green-100;
+                }
+            }
         }
     }
 }
 
-.dot-green{
+.dot-green {
     background-color: $color-v2-green-100;
+    height: 12px;
+    width: 12px;
 }
 
-.dot-white{
+.dot-white {
     background-color: white;
+    height: 8px;
+    width: 8px;
 }
-
