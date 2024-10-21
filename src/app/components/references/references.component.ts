@@ -26,7 +26,11 @@ export class ReferencesComponent implements AfterViewInit {
 
   private emblaApi?: EmblaCarouselType;
   public options = { loop: true };
-  public plugins = [Autoplay()];
+  public plugins = [Autoplay({
+    stopOnMouseEnter: true,
+    stopOnFocusIn: true,
+    stopOnInteraction: true
+  })];
   public activeSlide: number | undefined = undefined;
 
   ngAfterViewInit(): void {
@@ -36,13 +40,6 @@ export class ReferencesComponent implements AfterViewInit {
         this.activeSlide = this.emblaApi?.selectedScrollSnap();        
       });
     }
-    setTimeout(() => {
-      if (this.emblaApi) {
-        this.emblaApi.on('settle', () => {
-          this.emblaApi?.plugins().autoplay.play();
-        });
-      }
-    }, 4000);
   }
 
   readonly subscribeToEvents: EmblaEventType[] = [

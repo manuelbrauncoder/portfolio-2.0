@@ -9,8 +9,6 @@
     margin: 0 auto;
     padding: 96px;
     @include dFlex($fd: column, $g: 48px);
-    overflow: hidden;
-
 
     h2 {
         @include font-fira-code($fs: 32px, $fw: 700);
