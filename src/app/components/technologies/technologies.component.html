@@ -15,51 +15,27 @@
             </div>
         </div>
         <div class="skills">
-            <div class="skill">
-                <img src="assets/img/skills-angular.svg" alt="">
-                <span>Angular</span>
+            @for (skill of skills; track $index) {
+                <div class="skill">
+                    <img src="{{ skill.imgPath }}" alt="">
+                    <span>{{ skill.skill }}</span>
+                </div>
+            }
+            
+            <div class="skill-wrapper">
+                <div (mouseover)="handleMouseHover()" (mouseleave)="handleMouseLeave()" class="skill">
+                    <img src="assets/img/skills-growth.svg" alt="">
+                    <span>Growth mindset</span>
+                    
+                </div>
+                @if (showGrowthPopup) {
+                    <div @fadeIn class="growth-popup">
+                        <app-growth-popup></app-growth-popup>
+                    </div>
+                }
+                
             </div>
-            <div class="skill">
-                <img src="assets/img/skills-typescript.svg" alt="">
-                <span>TypeScript</span>
-            </div>
-            <div class="skill">
-                <img src="assets/img/skills-javascript.svg" alt="">
-                <span>JavaScript</span>
-            </div>
-            <div class="skill">
-                <img src="assets/img/skills-rest.svg" alt="">
-                <span>Rest-Api</span>
-            </div>
-            <div class="skill">
-                <img src="assets/img/skills-firebase.svg" alt="">
-                <span>Firebase</span>
-            </div>
-            <div class="skill">
-                <img src="assets/img/skills-html.svg" alt="">
-                <span>HTML</span>
-            </div>
-            <div class="skill">
-                <img src="assets/img/skills-css.svg" alt="">
-                <span>CSS</span>
-            </div>
-            <div class="skill">
-                <img src="assets/img/skills-git.svg" alt="">
-                <span>GIT</span>
-            </div>
-            <div class="skill">
-                <img src="assets/img/skills-scrum.svg" alt="">
-                <span>Scrum</span>
-            </div>
-            <div class="skill">
-                <img src="assets/img/skills-material.svg" alt="">
-                <span>Material Design</span>
-            </div>
-            <div class="skill">
-                <img src="assets/img/skills-growth.svg" alt="">
-                <span>Growth mindset</span>
-                <div class="growth-popup">Test</div>
-            </div>
+            
         </div>
     </div>
 </div>

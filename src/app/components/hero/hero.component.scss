@@ -1,8 +1,14 @@
 @use '../../../styles.scss' as *;
 
+.my-name {
+    @include font-karla($fs: 128px, $fw: 700);
+    color: $color-not-white;
+    margin-top: 12px;
+}
+
 .content-bg {
     background: linear-gradient(180deg, rgba(28, 28, 28, 0) 0%, $color-black-bg 100%),
-    linear-gradient(45deg, $color-black-bg 30%, $color-green-bg 70%);
+        linear-gradient(45deg, $color-black-bg 30%, $color-green-bg 70%);
 }
 
 .hero-content {

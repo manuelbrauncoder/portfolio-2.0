@@ -69,7 +69,6 @@
         transform: translateY(70px);
 
         .skill {
-            position: relative;
             @include dFlex($fd: column, $g: 8px);
             width: 104px;
             height: 116px;
@@ -93,11 +92,16 @@
     }
 }
 
+.skill-wrapper {
+    position: relative;
+}
+
 .growth-popup {
     position: absolute;
-    top: 0;
-    left: 0;
+    bottom: 130px;
+    left: 20%;
     box-shadow: 0px 4px 4px 0px #00000040;
     background-color: white;
     border-radius: 30px;
+    padding: 32px;
 }
