@@ -1,8 +1,11 @@
 @use '../../../styles.scss' as *;
 
 header {
+    @media(max-width: 999px) {
+        padding: 1rem;
+    }
     @media(max-width: 899px) {
-        flex-direction: row-reverse !important;
+        flex-direction: row-reverse;
     }
     @include dFlex($jc: space-between);
     max-width: $content-limit;

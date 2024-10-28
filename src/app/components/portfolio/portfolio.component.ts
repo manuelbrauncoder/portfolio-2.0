@@ -17,7 +17,9 @@ export class PortfolioComponent {
   showProjectImage: 'dabubble' | 'join' | 'epl' | '' = '';
 
   async onMouseOver(project: 'dabubble' | 'join' | 'epl' | ''){
+    if (window.innerWidth >= 1199) {
       this.showProjectImage = project;
+    }
   }
 
   onMouseLeave(){

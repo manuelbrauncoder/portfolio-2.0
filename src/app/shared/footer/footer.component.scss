@@ -5,42 +5,68 @@
 }
 
 footer {
+    @media(max-width: 999px) {
+        padding: 1rem;
+    }
     max-width: $content-limit;
     margin: 0 auto;
     padding: 0 6rem 2rem 6rem;
-    @include dFlex($jc: space-between);
+    @include dFlex($fd: column, $g: 2rem);
 
-    .logo-section {
-        .logo {
-            @include dFlex($fd: column, $ai: flex-start);
-            margin-bottom: 2rem;
-    
-            span:nth-child(1) {
-                @include font-fira-code($fs: 1.5rem, $fw: 700);
+    section {
+        width: 100%;
+        @include dFlex($jc: space-between);
+
+        .logo-section {
+            .logo {
+                @include dFlex($fd: column, $ai: flex-start);
+                margin-bottom: 2rem;
+
+                span:nth-child(1) {
+                    @include font-fira-code($fs: 1.5rem, $fw: 700);
+                    color: white;
+                }
+
+                span:nth-child(2) {
+                    @include font-fira-code($fs: 1.5rem, $fw: 700);
+                    color: $color-v2-green-100;
+                }
+            }
+
+            p {
+                @include font-karla($fs: 1rem, $fw: 400);
                 color: white;
             }
-    
-            span:nth-child(2) {
-                @include font-fira-code($fs: 1.5rem, $fw: 700);
+        }
+
+        .created-by {
+            @media(max-width: 899px) {
+                display: none;
+            }
+            span {
+                @include font-fira-code($fs: 1.125rem, $fw: 400);
                 color: $color-v2-green-100;
             }
         }
 
-        p {
+        nav {
+            @include dFlex($fd: column, $ai: flex-start, $jc: flex-start, $g: 0.5rem);
             @include font-karla($fs: 1rem, $fw: 400);
-            color: white;
         }
+
     }
 
-    .created-by {
+    .created-by-mobile {
+        @media(max-width: 899px) {
+            display: block;
+        }
+
+        display: none;
+
         span {
             @include font-fira-code($fs: 1.125rem, $fw: 400);
             color: $color-v2-green-100;
         }
     }
 
-    nav {
-        @include dFlex($fd: column, $ai: flex-start, $jc: flex-start, $g: 0.5rem);
-        @include font-karla($fs: 1rem, $fw: 400);
-    }
 }

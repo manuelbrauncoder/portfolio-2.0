@@ -5,6 +5,13 @@
 }
 
 .portfolio-content {
+    @media(max-width: 999px) {
+        padding: 1rem;
+    }
+    @media(max-width: 1199px) {
+        justify-content: center;
+    }
+
     width: 100%;
     max-width: $content-limit;
     margin: 0 auto;
@@ -12,6 +19,11 @@
     @include dFlex($g: 1rem, $jc: flex-start);
 
     .featured {
+        @media(max-width: 1199px) {
+            width: 100%;
+            justify-content: center;
+        }
+
         width: 45%;
         @include dFlex($fd: column, $ai: flex-start, $jc: flex-start);
 
@@ -35,6 +47,12 @@
         }
 
         .project-facts {
+            @media(max-width: 1199px) {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 0.5rem;
+                padding: 1.5rem 0;
+            }
             @include dFlex($jc: space-between);
             padding: 2.5rem 2rem;
             width: 100%;
@@ -53,6 +71,9 @@
             }
 
             .tech-stack {
+                @media(max-width: 1199px) {
+                    justify-content: flex-start;
+                }
                 @include dFlex($jc: flex-end, $g: 0.25rem);
                 width: 100%;
 
@@ -71,6 +92,10 @@
 }
 
 .image-container {
+    @media(max-width: 1199px) {
+        display: none;
+    }
+
     width: 50%;
     @include dFlex();
 }

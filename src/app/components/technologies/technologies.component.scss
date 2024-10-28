@@ -5,6 +5,13 @@
 }
 
 .technologies-content {
+    @media(max-width: 899px) {
+        padding: 1rem;
+    }
+    @media(max-width: 1099px) {
+        flex-direction: column;
+        align-items: center;
+    }
     width: 100%;
     max-width: $content-limit;
     margin: 0 auto;
@@ -19,6 +26,9 @@
         }
 
         .box {
+            @media(max-width: 999px) {
+                max-width: 31.25rem;
+            }
             border: 1px solid $color-v2-green-100;
             background-color: $color-v2-green-10;
             border-radius: 1.875rem;
@@ -61,6 +71,11 @@
     }
 
     .skills {
+        @media(max-width: 999px) {
+            transform: translateY(0);
+            justify-content: center;
+            max-width: 31.25rem;
+        }
         @include dFlex($jc: flex-start, $ai: flex-start, $g: 4.5rem);
         flex-wrap: wrap;
         flex: 2;
@@ -80,6 +95,8 @@
 
             img {
                 @extend .hover-transition;
+                width: 4rem;
+                height: 4rem;
             }
 
             span {

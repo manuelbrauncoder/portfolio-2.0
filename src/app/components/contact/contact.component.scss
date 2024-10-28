@@ -5,6 +5,14 @@
 }
 
 .contact-content {
+    @media(max-width: 899px) {
+        padding: 1rem;
+    }
+
+    @media(max-width: 1099px) {
+        flex-direction: column;
+    }
+
     max-width: $content-limit;
     margin: 0 auto;
     padding: 6rem;

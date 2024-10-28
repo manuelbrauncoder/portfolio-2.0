@@ -5,6 +5,10 @@
 }
 
 .references-content {
+    @media(max-width: 899px) {
+        padding: 1rem;
+    }
+   
     max-width: $content-limit;
     margin: 0 auto;
     padding: 6rem;

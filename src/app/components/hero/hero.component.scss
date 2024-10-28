@@ -1,9 +1,13 @@
 @use '../../../styles.scss' as *;
 
 .my-name {
+    @media(max-width: 999px) {
+        font-size: 6rem;
+    }
     @include font-karla($fs: 8rem, $fw: 700);
     color: $color-not-white;
     margin-top: 0.75rem;
+    text-align: center;
 }
 
 .content-bg {
@@ -12,6 +16,9 @@
 }
 
 .hero-content {
+    @media(max-width: 999px) {
+        padding: 6.25rem 1rem 0 1rem;
+    }
     position: relative;
     @include dFlex();
     height: 100dvh;
@@ -27,6 +34,9 @@
         h3 {
             @include font-fira-code($fs: 2.5rem, $fw: 400);
             color: $color-not-white;
+            @media(max-width: 999px) {
+                font-size: 2rem;
+            }
         }
 
         h1 {
@@ -43,12 +53,18 @@
 }
 
 .left-line {
+    @media(max-width: 999px) {
+        left: 1rem;
+    }
     position: absolute;
     bottom: 0;
     left: 6rem;
     @include dFlex($fd: column, $g: 0.625rem);
 
     .line {
+        @media(max-width: 999px) {
+            height: 10rem;
+        }
         width: 1px;
         height: 15rem;
         border: unset;
@@ -83,12 +99,18 @@
 }
 
 .right-line {
+    @media(max-width: 999px) {
+        right: 1rem;
+    }
     position: absolute;
     bottom: 0;
     right: 6rem;
     @include dFlex($fd: column, $g: 0.625rem);
 
-    a {
+    .link-text {
+        @media(max-width: 899px) {
+            display: none;
+        }
         @include font-karla($fs: 1.125rem, $fw: 400);
         color: white;
         writing-mode: vertical-rl;
@@ -103,6 +125,13 @@
         }
     }
 
+    .link-img {
+        @media(max-width: 899px) {
+            display: block;
+        }
+        display: none;
+    }
+
     svg:hover path {
         fill: white;
         @extend .hover-transition;
@@ -113,8 +142,11 @@
     }
 
     .line {
+        @media(max-width: 999px) {
+            height: 6rem;
+        }
         width: 1px;
-        height: 11.625rem;
+        height: 11rem;
         border: unset;
         background-color: white;
     }
@@ -140,12 +172,15 @@
 }
 
 .marquee {
+    @media(max-width: 999px) {
+        bottom: 1rem;
+    }
     transform: rotate(-2deg);
     overflow: hidden;
     position: absolute;
     left: 0;
     bottom: 3.875rem;
-    width: 100%;
+    width: calc(100% - 1px);
     height: 3.875rem;
     background-color: $color-blur-bg;
     backdrop-filter: blur(0.33125rem);
