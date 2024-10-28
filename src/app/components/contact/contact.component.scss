@@ -7,35 +7,37 @@
 .contact-content {
     max-width: $content-limit;
     margin: 0 auto;
-    padding: 96px;
-    @include dFlex($jc: space-around, $g: 16px, $ai: flex-start);
+    padding: 6rem;
+    @include dFlex($jc: space-around, $g: 1rem, $ai: flex-start);
 
     .info-box {
-        @include dFlex($fd: column, $ai: flex-start, $jc: flex-start, $g: 40px);
+        @include dFlex($fd: column, $ai: flex-start, $jc: flex-start, $g: 2.5rem);
 
-        .subheadline{
-            @include font-karla($fs: 24px, $fw: 400);
+        .subheadline {
+            @include font-karla($fs: 1.5rem, $fw: 400);
             color: $color-v2-green-100;
         }
 
         h1 {
-            @include font-fira-code($fs: 64px, $fw: 700);
+            @include font-fira-code($fs: 4rem, $fw: 700);
             color: $color-v2-green-100;
         }
 
         .question {
-            @include font-karla($fs: 24px, $fw: 700);
+            @include font-karla($fs: 1.5rem, $fw: 700);
             color: $color-v2-green-100;
         }
 
-        p{
-            @include font-karla($fs: 16px, $fw: 400);
+        p {
+            @include font-karla($fs: 1rem, $fw: 400);
             color: $color-not-white;
             max-width: 55ch;
+
             &:hover {
                 color: white;
             }
-            span{
+
+            span {
                 color: $color-v2-green-100;
             }
         }

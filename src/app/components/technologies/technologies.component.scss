@@ -8,30 +8,30 @@
     width: 100%;
     max-width: $content-limit;
     margin: 0 auto;
-    padding: 96px;
-    @include dFlex($jc: space-around, $g: 16px, $ai: flex-start);
+    padding: 6rem;
+    @include dFlex($jc: space-around, $g: 1rem, $ai: flex-start);
 
     .skill-set {
         .headline {
-            @include font-karla($fs: 24px, $fw: 700);
+            @include font-karla($fs: 1.5rem, $fw: 700);
             color: $color-v2-green-100;
-            margin-bottom: 10px;
+            margin-bottom: 0.625rem;
         }
 
         .box {
             border: 1px solid $color-v2-green-100;
             background-color: $color-v2-green-10;
-            border-radius: 30px;
-            padding: 32px;
-            @include dFlex($fd: column, $ai: flex-start, $g: 40px);
+            border-radius: 1.875rem;
+            padding: 2rem;
+            @include dFlex($fd: column, $ai: flex-start, $g: 2.5rem);
 
             h2 {
-                @include font-fira-code($fs: 64px, $fw: 700);
+                @include font-fira-code($fs: 4rem, $fw: 700);
                 color: $color-v2-green-100;
             }
 
             .subheadline {
-                @include font-karla($fs: 18px, $fw: 400);
+                @include font-karla($fs: 1.125rem, $fw: 400);
                 color: $color-not-white;
                 max-width: 50ch;
 
@@ -41,7 +41,7 @@
             }
 
             h3 {
-                @include font-fira-code($fs: 24px, $fw: 700);
+                @include font-fira-code($fs: 1.5rem, $fw: 700);
                 color: white;
 
                 span {
@@ -50,7 +50,7 @@
             }
 
             p {
-                @include font-karla($fs: 16px, $fw: 400);
+                @include font-karla($fs: 1rem, $fw: 400);
                 color: $color-not-white;
 
                 &:hover {
@@ -61,17 +61,17 @@
     }
 
     .skills {
-        @include dFlex($jc: flex-start, $ai: flex-start, $g: 72px);
+        @include dFlex($jc: flex-start, $ai: flex-start, $g: 4.5rem);
         flex-wrap: wrap;
         flex: 2;
-        max-width: 640px;
-        margin-top: 28px;
-        transform: translateY(70px);
+        max-width: 40rem;
+        margin-top: 1.75rem;
+        transform: translateY(4.375rem);
 
         .skill {
-            @include dFlex($fd: column, $g: 8px);
-            width: 104px;
-            height: 116px;
+            @include dFlex($fd: column, $g: 0.5rem);
+            width: 6.5rem;
+            height: 7.25rem;
         
             &:hover img {
                 scale: 1.15;
@@ -83,7 +83,7 @@
             }
 
             span {
-                @include font-fira-code($fs: 18px, $fw: 400);
+                @include font-fira-code($fs: 1.125rem, $fw: 400);
                 color: white;
                 white-space: wrap;
                 text-align: center;
@@ -98,11 +98,11 @@
 
 .growth-popup {
     position: absolute;
-    bottom: 130px;
-    left: 20%;
-    box-shadow: 0px 4px 4px 0px #00000040;
+    bottom: 8.125rem;
+    left: 1.25rem;
+    box-shadow: 0px 0.25rem 0.25rem 0px #00000040;
     background-color: white;
-    border-radius: 30px;
-    padding: 32px;
+    border-radius: 1.875rem;
+    padding: 2rem;
     z-index: 5;
 }

@@ -1,28 +1,30 @@
 @use '../../../styles.scss' as *;
 
 .wrapper {
-    @include dFlex($fd: column, $g: 16px);
+    @include dFlex($fd: column, $g: 1rem);
 
     h3 {
-        @include font-karla($fs: 16px, $fw: 400);
+        @include font-karla($fs: 1rem, $fw: 400);
         color: $color-v2-green-100;
         white-space: nowrap;
         text-align: center;
     }
     
     .growth-skills {
-        @include dFlex($g: 16px);
-        .growth-skill{
-            @include dFlex($fd: column, $g: 5px);
-            img{
-                width: 32px;
-                height: 32px;
+        @include dFlex($g: 1rem);
+        
+        .growth-skill {
+            @include dFlex($fd: column, $g: 0.3125rem);
+            
+            img {
+                width: 2rem;
+                height: 2rem;
             }
-            span{
-                @include font-karla($fs: 12px, $fw: 700);
+            
+            span {
+                @include font-karla($fs: 0.75rem, $fw: 700);
                 color: $color-v2-green-100;
             }
         }
     }
 }
-

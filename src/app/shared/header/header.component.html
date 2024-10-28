@@ -1,16 +1,22 @@
 <header>
-    <nav>
-        <div class="toggle">
-            <span (click)="toggleLanguage('en')" [ngClass]="language === 'en' ? 'activelg' : 'lg'">EN</span>
-            <span (click)="toggleLanguage('de')" [ngClass]="language === 'de' ? 'activelg' : 'lg'">DE</span>
-            <div [ngClass]="language === 'en' ? 'left' : 'right'" class="slider"></div>
-        </div>
-        <span class="link">About me</span>
-        <span class="link">Skills</span>
-        <span class="link">Projects</span>
-    </nav>
+
+    <app-nav-toggle></app-nav-toggle>
+
+    
+
+    <div (click)="toggleSidebar()" class="burgerMenu" [ngClass]="!showSidebar ? 'burgerMenu' : 'burgerMenuClosed'">
+        <span class="line top"></span>
+        <span class="line middle"></span>
+        <span class="line bottom"></span>
+    </div>
+
     <div class="logo">
         <span>Manuel</span>
         <span>Braun</span>
     </div>
+
+    @if (showSidebar) {
+    <app-sidebar></app-sidebar>
+    <div (click)="toggleSidebar()" class="menu-background"></div>
+    }
 </header>

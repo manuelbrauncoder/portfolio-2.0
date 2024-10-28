@@ -1,9 +1,9 @@
 @use '../../../styles.scss' as *;
 
 .my-name {
-    @include font-karla($fs: 128px, $fw: 700);
+    @include font-karla($fs: 8rem, $fw: 700);
     color: $color-not-white;
-    margin-top: 12px;
+    margin-top: 0.75rem;
 }
 
 .content-bg {
@@ -18,26 +18,26 @@
     width: 100%;
     max-width: $content-limit;
     margin: 0 auto;
-    padding: 100px 96px 0 96px;
+    padding: 6.25rem 6rem 0 6rem;
 
     .center {
         @include dFlex($fd: column);
-        margin-bottom: 100px;
+        margin-bottom: 6.25rem;
 
         h3 {
-            @include font-fira-code($fs: 40px, $fw: 400);
+            @include font-fira-code($fs: 2.5rem, $fw: 400);
             color: $color-not-white;
         }
 
         h1 {
-            @include font-karla($fs: 128px, $fw: 700);
+            @include font-karla($fs: 8rem, $fw: 700);
             color: $color-not-white;
-            margin-top: 12px;
+            margin-top: 0.75rem;
         }
 
         .btns {
-            @include dFlex($g: 48px);
-            margin-top: 40px;
+            @include dFlex($g: 3rem);
+            margin-top: 2.5rem;
         }
     }
 }
@@ -45,20 +45,20 @@
 .left-line {
     position: absolute;
     bottom: 0;
-    left: 96px;
-    @include dFlex($fd: column, $g: 10px);
+    left: 6rem;
+    @include dFlex($fd: column, $g: 0.625rem);
 
     .line {
         width: 1px;
-        height: 240px;
+        height: 15rem;
         border: unset;
         background-color: $color-v2-green-100;
     }
 
     .arrow {
         @include dFlex();
-        width: 30px;
-        height: 48px;
+        width: 1.875rem;
+        height: 3rem;
         border: 1px solid $color-v2-green-100;
         border-radius: 100vw;
 
@@ -70,26 +70,26 @@
 
 @keyframes move-arrow {
     0% {
-        transform: translateY(-3px);
+        transform: translateY(-0.1875rem);
     }
 
     50% {
-        transform: translateY(3px);
+        transform: translateY(0.1875rem);
     }
 
     100% {
-        transform: translateY(-3px);
+        transform: translateY(-0.1875rem);
     }
 }
 
 .right-line {
     position: absolute;
     bottom: 0;
-    right: 96px;
-    @include dFlex($fd: column, $g: 10px);
+    right: 6rem;
+    @include dFlex($fd: column, $g: 0.625rem);
 
     a {
-        @include font-karla($fs: 18px, $fw: 400);
+        @include font-karla($fs: 1.125rem, $fw: 400);
         color: white;
         writing-mode: vertical-rl;
         transform: rotate(180deg);
@@ -112,10 +112,9 @@
         @extend .hover-transition;
     }
 
-
     .line {
         width: 1px;
-        height: 186px;
+        height: 11.625rem;
         border: unset;
         background-color: white;
     }
@@ -134,7 +133,7 @@
         position: absolute;
         top: 50%;
         right: 0;
-        transform: translate(10px, -50%);
+        transform: translate(0.625rem, -50%);
         opacity: 0;
         transition: opacity 125ms ease-out;
     }
@@ -145,32 +144,25 @@
     overflow: hidden;
     position: absolute;
     left: 0;
-    bottom: 62px;
+    bottom: 3.875rem;
     width: 100%;
-    height: 62px;
+    height: 3.875rem;
     background-color: $color-blur-bg;
-    backdrop-filter: blur(5.300000190734863px);
+    backdrop-filter: blur(0.33125rem);
     display: flex;
-    gap: 48px;
+    gap: 3rem;
 
-    .scroll-one {
+    .scroll-one, .scroll-two {
         animation: loop 30s linear infinite;
-        @include dFlex($jc: space-around, $g: 48px);
-        overflow: hidden;
-        flex-shrink: 0;
-    }
-
-    .scroll-two {
-        animation: loop 30s linear infinite;
-        @include dFlex($jc: space-around, $g: 48px);
+        @include dFlex($jc: space-around, $g: 3rem);
         overflow: hidden;
         flex-shrink: 0;
     }
 
     span {
-        @include font-karla($fs: 32px, $fw: 400);
+        @include font-karla($fs: 2rem, $fw: 400);
         color: $color-v2-green-100;
-        letter-spacing: 2px;
+        letter-spacing: 0.125rem;
         white-space: nowrap;
     }
 }
@@ -181,6 +173,6 @@
     }
 
     100% {
-        transform: translateX(calc(-100% - 48px));
+        transform: translateX(calc(-100% - 3rem));
     }
 }

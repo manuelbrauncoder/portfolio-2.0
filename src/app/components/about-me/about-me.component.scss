@@ -8,64 +8,64 @@
     width: 100%;
     max-width: $content-limit;
     margin: 0 auto;
-    padding: 96px;
-    @include dFlex($jc: space-around, $g: 16px);
+    padding: 6rem;
+    @include dFlex($jc: space-around, $g: 1rem);
 
     .my-image {
-        width: 500px;
-        max-height: 570px;
-        border-radius: 30px;
+        width: 31.25rem;
+        max-height: 35.625rem;
+        border-radius: 1.875rem;
         object-fit: cover;
         background-color: #f6f6f6;
-        object-position: 0 -35px;
+        object-position: 0 -2.1875rem;
     }
 
     .about-me-box {
-        transform: translateY(70px);
+        transform: translateY(4.375rem);
+
         h3 {
-            @include font-karla($fs: 24px, $fw: 500);
+            @include font-karla($fs: 1.5rem, $fw: 500);
             color: $color-v2-green-100;
-            margin-bottom: 10px;
+            margin-bottom: 0.625rem;
         }
 
         .box {
             border: 1px solid $color-v2-green-100;
             background-color: $color-v2-green-10;
-            border-radius: 30px;
-            padding: 32px;
-            @include dFlex($fd: column, $ai: flex-start, $g: 40px);
+            border-radius: 1.875rem;
+            padding: 2rem;
+            @include dFlex($fd: column, $ai: flex-start, $g: 2.5rem);
 
             h2 {
-                @include font-fira-code($fs: 64px, $fw: 700);
+                @include font-fira-code($fs: 4rem, $fw: 700);
                 color: $color-v2-green-100;
             }
 
             .subheadline {
-                @include font-karla($fs: 18px, $fw: 400);
+                @include font-karla($fs: 1.125rem, $fw: 400);
                 color: white;
                 max-width: 55ch;
             }
 
             .point {
-                @include dFlex($jc: flex-start, $ai: flex-start, $g: 24px);
+                @include dFlex($jc: flex-start, $ai: flex-start, $g: 1.5rem);
 
                 img {
-                    width: 32px;
-                    height: 32px;
+                    width: 2rem;
+                    height: 2rem;
                 }
 
                 p {
-                    @include font-karla($fs: 18px, $fw: 400);
+                    @include font-karla($fs: 1.125rem, $fw: 400);
                     color: $color-not-white;
                     cursor: default;
                     max-width: 49ch;
 
-                    &:hover{
+                    &:hover {
                         color: white;
                     }
                 }
             }
         }
-
     }
 }

@@ -1,0 +1,8 @@
+@use '../../../styles.scss' as *;
+
+aside {
+    background: linear-gradient(55.22deg, #1C1C1C 36.26%, #08463B 93.28%);
+    border: 1px solid $color-v2-green-100;
+    border-radius: 1.875rem;
+    padding: 2.5rem 4.8rem;
+}

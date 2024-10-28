@@ -2,30 +2,30 @@
 
 .reference {
     position: relative;
-    border: 1px solid $color-v2-green-100;
+    border: 0.0625rem solid $color-v2-green-100;
     background-color: $color-v2-green-30;
-    padding: 48px 40px;
-    @include dFlex($fd: column, $ai: flex-start, $jc: flex-start, $g: 44px);
-    border-radius: 32px;
-    width: 700px;
+    padding: 3rem 2.5rem;
+    @include dFlex($fd: column, $ai: flex-start, $jc: flex-start, $g: 2.75rem);
+    border-radius: 2rem;
+    width: 43.75rem;
 
-    p{
-        @include font-karla($fs: 20px, $fw: 400);
+    p {
+        @include font-karla($fs: 1.25rem, $fw: 400);
         color: white;
     }
 
     .footer {
-        @include dFlex($jc: flex-start, $g: 16px);
+        @include dFlex($jc: flex-start, $g: 1rem);
         width: 100%;
-        hr{
-           flex: 2;
-           height: 1px;
-           border: unset;
-           background-color: white; 
+        hr {
+            flex: 2;
+            height: 0.0625rem;
+            border: unset;
+            background-color: white; 
         }
 
-        span{
-            @include font-karla($fs: 18px, $fw: 400);
+        span {
+            @include font-karla($fs: 1.125rem, $fw: 400);
             color: white;
         }
     }
@@ -33,9 +33,9 @@
 
 .quotes {
     position: absolute;
-    top: -20px;
-    left: -30px;
+    top: -1.25rem;
+    left: -1.875rem;
     z-index: 5;
-    width: 80px;
-    height: 80px;
+    width: 5rem;
+    height: 5rem;
 }

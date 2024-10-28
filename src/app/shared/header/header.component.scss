@@ -1,94 +1,99 @@
 @use '../../../styles.scss' as *;
 
 header {
+    @media(max-width: 899px) {
+        flex-direction: row-reverse !important;
+    }
     @include dFlex($jc: space-between);
     max-width: $content-limit;
     margin: 0 auto;
-    padding: 0 96px;
+    padding: 0 6rem;
     height: 100%;
-
-    nav {
-        @include dFlex($jc: flex-start, $g: 24px);
-
-        .link {
-            position: relative;
-            @include font-fira-code($fs: 20px, $fw: 400);
-            cursor: pointer;
-            color: white;
-            @extend .hover-transition;
-          
-            &::after {
-              content: '';
-              position: absolute;
-              bottom: 0;
-              left: 50%;
-              transform: translate(-50%, 10px);
-              @extend .green-dot;
-              opacity: 0;
-              transition: opacity 125ms ease-out;
-            }
-          
-            &:hover::after {
-              opacity: 1;
-            }
-          }
-    }
+    position: relative;
 
     .logo {
         @include dFlex($fd: column, $ai: flex-start);
 
         span:nth-child(1) {
-            @include font-fira-code($fs: 24px, $fw: 700);
+            @include font-fira-code($fs: 1.5rem, $fw: 700);
             color: white;
         }
 
         span:nth-child(2) {
-            @include font-fira-code($fs: 24px, $fw: 700);
+            @include font-fira-code($fs: 1.5rem, $fw: 700);
             color: $color-v2-green-100;
         }
     }
+}
 
-    .toggle {
-        position: relative;
-        border: 1px solid $color-v2-green-100;
-        border-radius: 100vw;
-        width: 84px;
-        height: 28px;
-        @include dFlex($jc: space-around);
-        cursor: pointer;
+.burgerMenu {
+    @media(max-width: 899px) {
+        display: block;
+    }
+    z-index: 6;
+    width: 1.875rem;
+    height: 1.875rem;
+    position: relative;
+    cursor: pointer;
+    display: none;
 
-        .activelg {
-            @include font-fira-code($fs: 16px, $fw: 700);
-            color: white;
-            z-index: 2;
-        }
+    .line {
+      position: absolute;
+      left: 0;
+      width: 100%;
+      height: 0.125rem;
+      border-radius: 0.125rem;
+      background-color: white;
+      transition: transform 175ms ease, top 175ms ease;
+    }
+  
+    .top {
+      top: 25%;
+    }
+  
+    .middle {
+      top: 50%;
+    }
+  
+    .bottom {
+      top: 75%;
+    }
+}
+  
+.burgerMenuClosed .top {
+    top: 50%;
+    transform: rotate(-45deg);
+}
+  
+.burgerMenuClosed .middle {
+    width: 0;
+}
+  
+.burgerMenuClosed .bottom {
+    top: 50%;
+    transform: rotate(45deg);
+}
 
-        .lg {
-            @include font-fira-code($fs: 16px, $fw: 400);
-            color: $color-v2-green-50;
-            z-index: 2;
-        }
+app-sidebar {
+    position: absolute;
+    top: 5rem;
+    right: 2rem;
+    z-index: 5;
+}
 
-        .slider {
-            position: absolute;
-            background-color: $color-v2-green-100;
-            width: 42px;
-            height: 28px;
-            border-radius: 100vw;
-            z-index: 1;
-            transition: all 200ms ease-in-out;
-            left: 0;
-            transition: transform 200ms ease-out;
-            transform: translateX(0)
-        }
+.menu-background {
+    position: fixed;
+    z-index: 4;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: $color-blur-bg;
+    backdrop-filter: blur(0.33rem);
+}
 
-        .left {
-            transform: translateX(0);
-        }
-
-        .right {
-            transform: translateX(42px);
-        }
-
+app-nav-toggle {
+    @media(max-width: 899px) {
+        display: none;
     }
 }
