@@ -1,12 +1,12 @@
 import { Component } from '@angular/core';
 import { skills } from "../../shared/skills";
 import { GrowthPopupComponent } from "../growth-popup/growth-popup.component";
-import { fadeIn, slideIn } from "../../shared/animations";
+import { fadeIn } from "../../shared/animations";
 
 @Component({
   selector: 'app-technologies',
   standalone: true,
-  animations: [fadeIn, slideIn],
+  animations: [fadeIn],
   imports: [GrowthPopupComponent],
   templateUrl: './technologies.component.html',
   styleUrl: './technologies.component.scss'

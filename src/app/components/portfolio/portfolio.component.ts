@@ -1,13 +1,13 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
-import { fadeIn, slideIn, slideRight } from "../../shared/animations";
+import { fadeIn } from "../../shared/animations";
 import { ProjectComponent } from "../project/project.component";
 
 @Component({
   selector: 'app-portfolio',
   standalone: true,
   imports: [CommonModule, ProjectComponent],
-  animations: [fadeIn, slideIn, slideRight],
+  animations: [fadeIn],
   templateUrl: './portfolio.component.html',
   styleUrl: './portfolio.component.scss'
 })

@@ -1,118 +1,161 @@
 @use '../../../styles.scss' as *;
 
 .project {
-    width: 90vw;
-    max-width: 87.5rem;
-    @include dFlex($jc: flex-start, $g: 2rem);
+    @media(max-width: 999px) {
+        padding: 1rem;
+        gap: 1rem;
+        max-height: 90dvh;
+    }
+
+    @include dFlex($fd: column);
     border-radius: 1.875rem;
     border: 0.0625rem solid $color-v2-green-100;
     background: linear-gradient(55.22deg, #1C1C1C 36.26%, #08463B 93.28%);
     padding: 5rem;
+    width: 90vw;
+    max-width: 87.5rem;
 
-    .details {
-        @include dFlex($fd: column, $ai: flex-start, $jc: flex-start, $g: 2.5rem);
-        width: 50%;
+    .close-icon {
+        @extend .hover-transition;
+        cursor: pointer;
+        margin-left: auto;
 
-        h1 {
-            @include font-karla($fs: 8rem, $fw: 700);
-            color: $color-v2-green-100;
-        }
+        &:hover {
+            @extend .hover-transition;
+            scale: 1.3;
 
-        h2 {
-            @include font-fira-code($fs: 4rem, $fw: 700);
-            color: white;
-        }
-
-        h3 {
-            @include font-fira-code($fs: 1.5rem, $fw: 700);
-            color: $color-v2-green-100;
-        }
-
-        p {
-            @include font-karla($fs: 1.125rem, $fw: 400);
-            color: $color-not-white;
-            max-width: 60ch;
-
-            &:hover {
-                color: white;
+            rect,
+            path {
+                fill: $color-v2-green-100;
             }
-        }
-
-        .skills {
-            @include dFlex($jc: flex-start, $g: 1rem);
-
-            .skill {
-                @include dFlex($g: 0.25rem);
-
-                img {
-                    width: 1.5rem;
-                    height: 1.5rem;
-                }
-
-                span {
-                    @include font-karla($fs: 1rem, $fw: 400);
-                    color: $color-not-white;
-                    cursor: default;
-
-                    &:hover {
-                        color: white;
-                    }
-                }
-            }
-        }
-
-        .btns {
-            @include dFlex($jc: flex-start, $g: 2rem);
         }
     }
 
-    .img-box {
-        @include dFlex($fd: column, $ai: flex-end, $g: 2.5rem);
-        height: 100%;
-        width: 50%;
+    section {
+        @media(max-width: 999px) {
+            flex-direction: column-reverse;
+            gap: 1rem;
+        }
 
-        .close-icon {
-            @extend .hover-transition;
-            cursor: pointer;
-            &:hover {
-                @extend .hover-transition;
-                scale: 1.3;
-                rect, path {
-                    fill: $color-v2-green-100;
+        @include dFlex($jc: flex-start, $g: 2rem);
+
+        .details {
+            @media(max-width: 999px) {
+                width: 100%;
+                gap: 0.5rem;
+            }
+
+            @include dFlex($fd: column, $ai: flex-start, $jc: flex-start, $g: 2.5rem);
+            width: 50%;
+
+            >div {
+                @media(max-width: 999px) {
+                    flex-direction: row;
+                    gap: 0.5rem;
+                    align-items: center;
                 }
+                @include dFlex($fd: column, $ai: flex-start, $g: 2rem);
+
+                h1 {
+                    @media(max-width: 999px) {
+                        font-size: 4.5rem;
+                    }
+                    @include font-karla($fs: 8rem, $fw: 700);
+                    color: $color-v2-green-100;
+                }
+    
+                h2 {
+                    @media(max-width: 999px) {
+                        font-size: 2.5rem;
+                    }
+                    @include font-fira-code($fs: 4rem, $fw: 700);
+                    color: white;
+                }
+            }
+
+            h3 {
+                @include font-fira-code($fs: 1.5rem, $fw: 700);
+                color: $color-v2-green-100;
+            }
+
+            p {
+                @media(max-width: 999px) {
+                    max-width: unset;
+                }
+
+                @include font-karla($fs: 1.125rem, $fw: 400);
+                color: $color-not-white;
+                max-width: 60ch;
+
+                &:hover {
+                    color: white;
+                }
+            }
+
+            .skills {
+                @include dFlex($jc: flex-start, $g: 1rem);
+                flex-wrap: wrap;
+
+                .skill {
+                    @include dFlex($g: 0.25rem);
+
+                    img {
+                        width: 1.5rem;
+                        height: 1.5rem;
+                    }
+
+                    span {
+                        @include font-karla($fs: 1rem, $fw: 400);
+                        color: $color-not-white;
+                        cursor: default;
+
+                        &:hover {
+                            color: white;
+                        }
+                    }
+                }
+            }
+
+            .btns {
+                @include dFlex($jc: flex-start, $g: 2rem);
             }
         }
 
         .project-img {
-            width: 100%;
+            @media(max-width: 999px) {
+                width: 100%;
+            }
+
+            width: 50%;
             height: auto;
             border-radius: 1.875rem;
         }
+    }
 
-        .text-btn {
-            @include dFlex($g: 0.5rem);
-            border: unset;
-            background-color: unset;
-            cursor: pointer;
+    .text-btn {
+        @include dFlex($g: 0.5rem);
+        border: unset;
+        background-color: unset;
+        cursor: pointer;
+        margin-left: auto;
+
+        img {
+            @extend .hover-transition;
+        }
+
+        span {
+            @include font-karla($fs: 1.125rem, $fw: 400);
+            color: $color-v2-green-100;
+        }
+
+        &:hover {
+            span {
+                color: white;
+            }
 
             img {
+                transform: translateX(0.3125rem) scale(1.3);
                 @extend .hover-transition;
-            }
-
-            span {
-                @include font-karla($fs: 1.125rem, $fw: 400);
-                color: $color-v2-green-100;
-            }
-
-            &:hover {
-                span {
-                    color: white;
-                }
-
-                img {
-                    transform: translateX(0.3125rem) scale(1.3);
-                    @extend .hover-transition;
-                }
             }
         }
     }
