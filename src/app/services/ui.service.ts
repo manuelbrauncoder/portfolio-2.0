@@ -1,3 +1,7 @@
+/**
+ * service file for handling ui actions
+ */
+
 import { ViewportScroller } from '@angular/common';
 import { inject, Injectable } from '@angular/core';
 
@@ -19,7 +23,7 @@ export class UiService {
    /**
    * scroll to position with offset
    * @param section in DOM
-   * @param offset in px
+   * @param offset in px (default = 0)
    */
    scrollToAnchor(section: string, offset: number = 0){
     let element = document.getElementById(section);

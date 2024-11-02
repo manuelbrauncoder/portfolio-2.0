@@ -1,12 +1,17 @@
 <nav [ngClass]="inSidebar ? 'in-sidebar' : 'in-header'">
     <div class="toggle">
-        <span (click)="toggleLanguage('en')" [ngClass]="language === 'en' ? 'activelg' : 'lg'">EN</span>
-        <span (click)="toggleLanguage('de')" [ngClass]="language === 'de' ? 'activelg' : 'lg'">DE</span>
-        <div [ngClass]="language === 'en' ? 'left' : 'right'" class="slider"></div>
+        <span (click)="ngxService.changeLanguage('en')"
+            [ngClass]="ngxService.getCurrentLanguage() === 'en' ? 'activelg' : 'lg'">EN</span>
+        <span (click)="ngxService.changeLanguage('de')"
+            [ngClass]="ngxService.getCurrentLanguage() === 'de' ? 'activelg' : 'lg'">DE</span>
+        <div [ngClass]="ngxService.getCurrentLanguage() === 'en' ? 'left' : 'right'" class="slider"></div>
     </div>
     <div [ngClass]="inSidebar ? 'links-column' : 'links-row'" class="links">
-        <span (click)="uiService.scrollToAnchor('about-me-anchor')" class="link">About me</span>
-        <span (click)="uiService.scrollToAnchor('skills-anchor')" class="link">Skills</span>
-        <span (click)="uiService.scrollToAnchor('projects-anchor', -50)" class="link">Projects</span>
+        <span (click)="scrollToAnchor('about-me-anchor', -50)" class="link">{{ 'header.about' | translate
+            }}</span>
+        <span (click)="scrollToAnchor('skills-anchor', -50)" class="link">{{ 'header.skills' | translate
+            }}</span>
+        <span (click)="scrollToAnchor('projects-anchor', -50)" class="link">{{ 'header.projects' | translate
+            }}</span>
     </div>
 </nav>

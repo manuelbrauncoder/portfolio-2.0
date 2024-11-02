@@ -1,0 +1,52 @@
+{
+  "header": {
+    "about": "Über mich",
+    "skills": "Skills",
+    "projects": "Projekte"
+  },
+  "hero": {
+    "dev": "Frontend Entwickler",
+    "btn1": "Projekte",
+    "btn2": "Kontakt",
+    "marquee": {
+      "1": "Verfügbar für remote",
+      "2": "Frontend Entwickler",
+      "3": "Wohnhaft in Partenstein / Spessart",
+      "4": "Offen für Jobangebote",
+      "5": "Offene Art"
+    }
+  },
+  "about": {
+    "h3": "Wer ich bin",
+    "h2": "Über mich",
+    "description": "Hi, ich bin Manuel und wohne in Partenstein, zwischen Würzburg und Aschaffenburg. Fasziniert von den grenzenlosen Möglichkeiten der Software Entwicklung, habe ich mich auf Frontend Entwicklung spezialisiert. Intuitive Webandwendungen und ansprechende Designs fesseln mich immer wieder auf´s neue.",
+    "1": "Ob remote von zuhause oder vor Ort im Büro. Meine Flexibilität in der Umgebung lässt mich von jedem Ort effektiv arbeiten.",
+    "2": "Immer offen für neue Technologien und nehme jede Herausforderung an. Dadurch verbessere ich kontinuierlich meine Fähigkeiten und erweitere mein Wissen.",
+    "3": "Für mich ist Programmieren nicht nur Code schreiben, sondern eine kreative Art komplexe Lösungen zu entwickeln. Auf diese Art kann ich dir helfen, deine Visionen umzusetzen und Ziele zu erreichen."
+  },
+  "technologies": {
+    "h3": "Technologien",
+    "h2": "Skill Set",
+    "description": "Während ich verschiedene Projekte umgesetzt habe, habe ich mir eine Reihe Frontend Skills und Konzepte angeeignet. Es begeistert mich neue stets neue Technologien und Methoden zu erlernen, mit diesem Mindset bleib ich immer auf aktuellem Stand.",
+    "question1": "Suchst du",
+    "question2": "eine andere Fähigkeit?",
+    "contact me": "Zögere nicht mich zu kontaktieren. Ich freue mich darauf, mein Wissen ständig zu erweitern.",
+    "btn": "Let´s Talk"
+  },
+  "portfolio": {
+    "h3": "Portfolio",
+    "h1": "Featured Projects",
+    "description": "Entdecke eine Auswahl meiner Projekte. Interagiere mit den Apps, um meine Fähigkeiten in Aktion zu sehen.",
+    "project-h3": "Um was geht es?",
+    "project-btn": "Nächstes Projekt",
+    "project1": {
+        "description": "This App is a Slack Clone App. It revolutionizes team communication and collaboration with its intuitive interface, real-time messaging, and robust channel organization."
+    },
+    "project2": {
+        "description": "This App is a Slack Clone App. It revolutionizes team communication and collaboration with its intuitive interface, real-time messaging, and robust channel organization."
+    },
+    "project3": {
+        "description": "This App is a Slack Clone App. It revolutionizes team communication and collaboration with its intuitive interface, real-time messaging, and robust channel organization."
+    }
+  }
+}

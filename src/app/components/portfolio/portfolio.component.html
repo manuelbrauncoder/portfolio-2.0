@@ -1,9 +1,9 @@
 <div class="content-bg">
     <div class="portfolio-content">
         <div class="featured">
-            <h3 id="projects-anchor">Portfolio</h3>
-            <h1>Featured Projects</h1>
-            <p>Explore a selection of my work here - Interact with projects to see my skills in action.</p>
+            <h3 id="projects-anchor">{{ 'portfolio.h3' | translate }}</h3>
+            <h1>{{ 'portfolio.h1' | translate }}</h1>
+            <p>{{ 'portfolio.description' | translate }}</p>
             <div (click)="openProjectDetails('dabubble')" class="project-facts border-top" (mouseover)="onMouseOver('dabubble')" (mouseleave)="onMouseLeave()">
                 <span class="title">DA Bubble</span>
                 <div class="tech-stack">

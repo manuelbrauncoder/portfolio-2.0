@@ -1,7 +1,8 @@
 export interface Project {
     id: string,
     title: string,
-    description: string,
+    description_de: string,
+    description_en: string,
     skills: Skill[],
     link: string,
     github: string,

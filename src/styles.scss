@@ -189,8 +189,8 @@ a {
   ::-webkit-scrollbar-thumb {
     background: linear-gradient($color-black-bg, $color-v2-green-100, $color-black-bg);
     border-radius: 30px;
-  }
-  
-  ::-webkit-scrollbar-thumb:hover {
-    background: blue;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient($color-black-bg, $color-v2-green-50, $color-black-bg);
   }

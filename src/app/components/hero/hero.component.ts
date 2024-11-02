@@ -1,16 +1,24 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, inject, OnInit } from '@angular/core';
+import { TranslateModule } from '@ngx-translate/core';
 import { NgxTypedWriterModule } from 'ngx-typed-writer';
+import { NgxTranslateService } from '../../services/ngx-translate.service';
 @Component({
   selector: 'app-hero',
   standalone: true,
-  imports: [NgxTypedWriterModule],
+  imports: [NgxTypedWriterModule, TranslateModule],
   templateUrl: './hero.component.html',
   styleUrl: './hero.component.scss'
 })
 export class HeroComponent implements OnInit {
 
+  ngxService = inject(NgxTranslateService);
+
   words: string[] = ['Manuel Braun'];
   showcursor = true;
+
+  constructor(){
+    this.ngxService.initNgxTranslate();
+  }
 
   ngOnInit(): void {
     setTimeout(() => {

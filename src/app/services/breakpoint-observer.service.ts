@@ -1,3 +1,7 @@
+/**
+ * service file for Angular cdk Breakpoint Observer
+ */
+
 import { DestroyRef, Injectable } from '@angular/core';
 import { BreakpointObserver, Breakpoints, BreakpointState } from '@angular/cdk/layout';
 import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
@@ -32,20 +36,16 @@ export class BreakpointObserverService {
   observeMobile(state: BreakpointState){
     if (state.breakpoints[this.mobile]) {
       this.isMobile = true;
-      console.log('mobile');
     } else {
       this.isMobile = false;
-      console.log('not mobile');
     }
   }
 
   observeHandsetLandscape(state: BreakpointState) {
     if (state.breakpoints[Breakpoints.HandsetLandscape]) {
       this.isHandsetLandscape = true;
-      console.log('handset landscape');
     } else {
       this.isHandsetLandscape = false;
-      console.log('not handset landscape');
     }
   }
 }

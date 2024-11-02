@@ -3,7 +3,8 @@ import { Project } from "../interfaces/project.interface";
 export const dabubble: Project = {
     id: "01",
     title: "DABubble",
-    description: "This App is a Slack Clone App. It revolutionizes team communication and collaboration with its intuitive interface, real-time messaging, and robust channel organization.",
+    description_de: "Ein Chat-Messenger im Stile von Slack. Echtzeitkommunikation in Channels oder über Direktnachrichten. Eine globale Suchfunktion erleichtert das Finden von Nutzern und Nachrichten.",
+    description_en: "A Messenger like Slack. Communicate with your team through channels or send private messages to other users. A global search feature makes it easy to find messages, users or channels. Share images or PDFs directly in the chat.",
     skills: [
         {
             name: 'Angular',
@@ -34,7 +35,8 @@ export const dabubble: Project = {
 export const join: Project = {
     id: "02",
     title: "Join",
-    description: "This App is a Slack Clone App. It revolutionizes team communication and collaboration with its intuitive interface, real-time messaging, and robust channel organization.",
+    description_de: "Aufgabenmanager, inspiriert vom Kanban-System. Erstellen und organisieren Sie Aufgaben mit Drag-and-Drop-Funktionen, weisen Sie Benutzer und Kategorien zu.",
+    description_en: "Task manager inspired by the Kanban System. Create and organize tasks, using drag and drop functions, and assign users and categories.",
     skills: [
         {
             name: 'Angular',
@@ -65,7 +67,8 @@ export const join: Project = {
 export const epl: Project = {
     id: "03",
     title: "El Pollo Loco",
-    description: "This App is a Slack Clone App. It revolutionizes team communication and collaboration with its intuitive interface, real-time messaging, and robust channel organization.",
+    description_de: "Ein einfaches Jump-and-Run-Spiel basierend auf einem objektorientierten Ansatz. Helfen Sie Pepe, Münzen und Salsa-Flaschen zu finden, um gegen die Killerhühner zu kämpfen.",
+    description_en: "A simple Jump-and-Run game based on an object-oriented approach. Help Pepe to find coins and salsa bottles to fight against the killer chicken.",
     skills: [
         {
             name: 'JavaScript',

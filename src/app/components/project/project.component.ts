@@ -1,20 +1,24 @@
-import { Component, EventEmitter, Input, OnChanges, OnInit, Output, SimpleChanges } from '@angular/core';
+import { Component, EventEmitter, inject, Input, OnChanges, OnInit, Output, SimpleChanges } from '@angular/core';
 import { Project } from '../../interfaces/project.interface';
 import { dabubble, epl, join } from '../../shared/projects';
+import { NgxTranslateService } from '../../services/ngx-translate.service';
+import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-project',
   standalone: true,
-  imports: [],
+  imports: [TranslateModule],
   templateUrl: './project.component.html',
   styleUrl: './project.component.scss'
 })
 export class ProjectComponent implements OnInit, OnChanges {
 
+  ngxService = inject(NgxTranslateService);
+
   @Input() currentProject: 'dabubble' | 'join' | 'epl' = 'dabubble';
   @Output() triggerClose = new EventEmitter();
-  project: Project | null = null; 
-
+  project: Project | null = null;
+  
   triggerCloseInParent(){
     this.triggerClose.emit();
   }
@@ -22,8 +26,9 @@ export class ProjectComponent implements OnInit, OnChanges {
   ngOnInit(): void {
     this.setCurrentProject(this.currentProject);
   }
+
   ngOnChanges(changes: SimpleChanges): void {
-    this.setCurrentProject(this.currentProject);    
+    this.setCurrentProject(this.currentProject); 
   }
 
   setCurrentProject(project: 'dabubble' | 'join' | 'epl'){
