@@ -14,15 +14,12 @@
 
 import { inject, Injectable } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
-import { Project } from '../interfaces/project.interface';
 
 @Injectable({
   providedIn: 'root',
 })
 export class NgxTranslateService {
   private translate = inject(TranslateService);
-
-  private projects: Project[] = [];
 
   initNgxTranslate(){
     this.translate.addLangs(['en', 'de']);

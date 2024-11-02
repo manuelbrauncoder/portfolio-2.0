@@ -9,9 +9,9 @@ header {
     }
     @include dFlex($jc: space-between);
     max-width: $content-limit;
+    height: 100%;
     margin: 0 auto;
     padding: 0 6rem;
-    height: 100%;
     position: relative;
 
     .logo {

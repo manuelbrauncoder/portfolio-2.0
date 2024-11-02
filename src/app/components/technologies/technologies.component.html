@@ -7,7 +7,7 @@
                 <p class="subheadline">{{ 'technologies.description' | translate }}</p>
                 <h3>{{ 'technologies.question1' | translate }} <span>{{ 'technologies.question2' | translate }}</span></h3>
                 <p>{{ 'technologies.contact me' | translate }}</p>
-                <button class="primary-btn"><span>{{ 'technologies.btn' | translate }}</span></button>
+                <button (click)="uiService.scrollToAnchor('contact-anchor', -50)" class="primary-btn"><span>{{ 'technologies.btn' | translate }}</span></button>
             </div>
         </div>
         <div class="skills">

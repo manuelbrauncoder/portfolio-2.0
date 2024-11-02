@@ -10,6 +10,10 @@ export const routes: Routes = [
         loadComponent: () => import('./pages/imprint/imprint.component').then((m) => m.ImprintComponent)
     },
     {
+        path: "privacy",
+        loadComponent: () => import('./pages/privacy/privacy.component').then((m) => m.PrivacyComponent)
+    },
+    {
         path: "not-found",
         loadComponent: () => import('./pages/not-found/not-found.component').then((m) => m.NotFoundComponent)
     },

@@ -1,22 +1,18 @@
-<header>
-
-    <app-nav-toggle></app-nav-toggle>
-
-    
-
-    <div (click)="uiService.toggleSidebar()" class="burgerMenu" [ngClass]="!uiService.showSidebar ? 'burgerMenu' : 'burgerMenuClosed'">
-        <span class="line top"></span>
-        <span class="line middle"></span>
-        <span class="line bottom"></span>
-    </div>
-
-    <div class="logo">
-        <span>Manuel</span>
-        <span>Braun</span>
-    </div>
-
-    @if (uiService.showSidebar) {
-    <app-sidebar @slideIn></app-sidebar>
-    <div @fadeIn (click)="uiService.toggleSidebar()" class="menu-background"></div>
-    }
-</header>
+<!-- <div class="header-bg"> -->
+    <header>
+        <app-nav-toggle></app-nav-toggle>
+        <div (click)="uiService.toggleSidebar()" class="burgerMenu" [ngClass]="!uiService.showSidebar ? 'burgerMenu' : 'burgerMenuClosed'">
+            <span class="line top"></span>
+            <span class="line middle"></span>
+            <span class="line bottom"></span>
+        </div>
+        <div class="logo">
+            <span>Manuel</span>
+            <span>Braun</span>
+        </div>
+        @if (uiService.showSidebar) {
+        <app-sidebar @slideIn></app-sidebar>
+        <div @fadeIn (click)="uiService.toggleSidebar()" class="menu-background"></div>
+        }
+    </header>
+<!-- </div> -->
