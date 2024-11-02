@@ -7,7 +7,6 @@
     padding: 3rem 2.5rem;
     @include dFlex($fd: column, $ai: flex-start, $jc: flex-start, $g: 2.75rem);
     border-radius: 2rem;
-    width: 43.75rem;
 
     p {
         @include font-karla($fs: 1.25rem, $fw: 400);

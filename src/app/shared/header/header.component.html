@@ -4,7 +4,7 @@
 
     
 
-    <div (click)="toggleSidebar()" class="burgerMenu" [ngClass]="!showSidebar ? 'burgerMenu' : 'burgerMenuClosed'">
+    <div (click)="uiService.toggleSidebar()" class="burgerMenu" [ngClass]="!uiService.showSidebar ? 'burgerMenu' : 'burgerMenuClosed'">
         <span class="line top"></span>
         <span class="line middle"></span>
         <span class="line bottom"></span>
@@ -15,8 +15,8 @@
         <span>Braun</span>
     </div>
 
-    @if (showSidebar) {
+    @if (uiService.showSidebar) {
     <app-sidebar @slideIn></app-sidebar>
-    <div @fadeIn (click)="toggleSidebar()" class="menu-background"></div>
+    <div @fadeIn (click)="uiService.toggleSidebar()" class="menu-background"></div>
     }
 </header>

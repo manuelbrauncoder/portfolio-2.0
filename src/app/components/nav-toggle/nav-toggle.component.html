@@ -5,8 +5,8 @@
         <div [ngClass]="language === 'en' ? 'left' : 'right'" class="slider"></div>
     </div>
     <div [ngClass]="inSidebar ? 'links-column' : 'links-row'" class="links">
-        <span class="link">About me</span>
-        <span class="link">Skills</span>
-        <span class="link">Projects</span>
+        <span (click)="uiService.scrollToAnchor('about-me-anchor')" class="link">About me</span>
+        <span (click)="uiService.scrollToAnchor('skills-anchor')" class="link">Skills</span>
+        <span (click)="uiService.scrollToAnchor('projects-anchor', -50)" class="link">Projects</span>
     </div>
 </nav>

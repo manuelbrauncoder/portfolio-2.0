@@ -23,8 +23,6 @@ export class ContactFormComponent {
   }
 
   toggleCheckbox(){
-    this.contact.acceptPrivacy = !this.contact.acceptPrivacy;
-    console.log(this.contact.acceptPrivacy);
-    
+    this.contact.acceptPrivacy = !this.contact.acceptPrivacy;    
   }
 }

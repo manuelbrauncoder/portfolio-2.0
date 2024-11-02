@@ -9,5 +9,5 @@ import { NavToggleComponent } from "../nav-toggle/nav-toggle.component";
   styleUrl: './sidebar.component.scss'
 })
 export class SidebarComponent {
-
+  // output nav-toggle -> sidebar -> header close menu or move into a service
 }
