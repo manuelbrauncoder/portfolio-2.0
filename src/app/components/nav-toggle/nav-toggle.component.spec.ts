@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { LanguageToggleComponent } from './nav-toggle.component';
+import { NavToggleComponent } from './nav-toggle.component';
 
 describe('LanguageToggleComponent', () => {
-  let component: LanguageToggleComponent;
-  let fixture: ComponentFixture<LanguageToggleComponent>;
+  let component: NavToggleComponent;
+  let fixture: ComponentFixture<NavToggleComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [LanguageToggleComponent]
+      imports: [NavToggleComponent]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(LanguageToggleComponent);
+    fixture = TestBed.createComponent(NavToggleComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
