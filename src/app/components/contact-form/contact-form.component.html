@@ -1,47 +1,47 @@
 <form name="contactForm" #contactForm="ngForm" (ngSubmit)="onSubmit(contactForm)">
 
-    <div class="input-wrapper">
-        <label for="">What´s your name?</label>
-        <input [ngClass]="{'placeholder-error': !name.valid && name.touched}"
-            [placeholder]="!name.valid && name.touched ? 'Oops! it seems your name is missing ' : 'Your name goes here'"
-            type="text" id="name" name="name" required minlength="4" [(ngModel)]="contact.name" #name="ngModel">
+  <div class="input-wrapper">
+    <label for="name">What´s your name?</label>
+    <input [ngClass]="{'placeholder-error': !name.valid && name.touched}"
+           [placeholder]="!name.valid && name.touched ? 'Oops! it seems your name is missing ' : 'Your name goes here'"
+           type="text" id="name" name="name" required minlength="4" [(ngModel)]="contact.name" #name="ngModel">
+  </div>
+  <div class="input-wrapper">
+    <label for="email">What´s your email?</label>
+    <input [ngClass]="{'placeholder-error': !email.valid && email.touched}"
+           [placeholder]="!email.valid && email.touched ? 'Hoppla! your email is required' : 'youremail@email.com'"
+           type="email" id="email" name="email" pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}" required
+           [(ngModel)]="contact.email" #email="ngModel">
+  </div>
+  <div class="input-wrapper">
+    <label for="message">How can I help you?</label>
+    <input [ngClass]="{'placeholder-error': !message.valid && message.touched}"
+           [placeholder]="!message.valid && message.touched ? 'What do you need to develop?' : 'Hello Manuel, I am interested in...'"
+           type="text" id="message" name="message" required minlength="6" [(ngModel)]="contact.message"
+           #message="ngModel">
+  </div>
+  <div class="checkbox-wrapper">
+    <div (click)="toggleCheckbox()" class="custom-check-icon">
+      @if (privacy.valid) {
+        <img src="assets/icons/contact-check.svg" alt="custom-check-icon">
+      } @else {
+        <img src="assets/icons/contact-uncheck.svg" alt="custom-check-icon-uncheck">
+      }
     </div>
-    <div class="input-wrapper">
-        <label for="">What´s your email?</label>
-        <input [ngClass]="{'placeholder-error': !email.valid && email.touched}"
-            [placeholder]="!email.valid && email.touched ? 'Hoppla! your email is required' : 'youremail@email.com'"
-            type="email" id="email" name="email" pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}" required
-            [(ngModel)]="contact.email" #email="ngModel">
-    </div>
-    <div class="input-wrapper">
-        <label for="message">How can I help you?</label>
-        <input [ngClass]="{'placeholder-error': !message.valid && message.touched}"
-            [placeholder]="!message.valid && message.touched ? 'What do you need to develop?' : 'Hello Manuel, I am interested in...'"
-            type="text" id="message" name="message" required minlength="6" [(ngModel)]="contact.message"
-            #message="ngModel">
-    </div>
-    <div class="checkbox-wrapper">
-        <div (click)="toggleCheckbox()" class="custom-check-icon">
-            @if (privacy.valid) {
-            <img src="assets/icons/contact-check.svg" alt="custom-check-icon">
-            } @else {
-            <img src="assets/icons/contact-uncheck.svg" alt="custom-check-icon-uncheck">
-            }
-        </div>
-        <input type="checkbox" [(ngModel)]="contact.acceptPrivacy" id="privacy" name="privacy" required
-            #privacy="ngModel">
-        <label for="privacy">I've read the <a routerLink="/privacy">privacy policy </a>and agree to the processing of my
-            data as outlined.</label>
-        @if (name.valid && email.valid && message.valid && !privacy.valid) {
-        <span class="hint">Please accept the privacy policy.</span>
-        }
-    </div>
-    <button [disabled]="!contactForm.valid" type="submit" class="primary-btn"><span>Say Hello ;)</span></button>
+    <input type="checkbox" [(ngModel)]="contact.acceptPrivacy" id="privacy" name="privacy" required
+           #privacy="ngModel">
+    <label for="privacy">I've read the <a routerLink="/privacy">privacy policy </a>and agree to the processing of my
+      data as outlined.</label>
+    @if (name.valid && email.valid && message.valid && !privacy.valid) {
+      <span class="hint">Please accept the privacy policy.</span>
+    }
+  </div>
+  <button [disabled]="!contactForm.valid" type="submit" class="primary-btn"><span>Say Hello ;)</span></button>
 </form>
 
 @if (showConfirmPopup) {
-<div @fadeIn class="popup-center">
+  <div @fadeIn class="popup-center">
     <app-confirm-popup></app-confirm-popup>
-</div>
-<div class="popup-bg"></div>
+  </div>
+  <div class="popup-bg"></div>
 }

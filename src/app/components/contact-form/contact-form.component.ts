@@ -16,7 +16,7 @@ import { ConfirmPopupComponent } from "../confirm-popup/confirm-popup.component"
 })
 export class ContactFormComponent {
   private http = inject(HttpClient);
-  mailtest = false;
+  mailtest = true;
   endPoint = 'https://beta-test.manuel-braun.net/sendMail.php';
   showConfirmPopup = false;
 
@@ -30,7 +30,7 @@ export class ContactFormComponent {
   onSubmit(ngForm: NgForm) {
     if (ngForm.valid && ngForm.submitted && !this.mailtest) {
       console.log(this.contact);
-      this.handleSendMail(ngForm);
+      this.handleSendMail(ngForm)
     } else if (ngForm.valid && ngForm.submitted && this.mailtest) {
       console.log(this.contact);
       this.confirm();
