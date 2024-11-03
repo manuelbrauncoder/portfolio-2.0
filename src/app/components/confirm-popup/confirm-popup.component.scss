@@ -1,0 +1,18 @@
+@use '../../../styles.scss' as *;
+
+.popup {
+    background-color: $color-green-bg;
+    padding: 2.5rem;
+    border-radius: 1.875rem;
+    border: 1px solid $color-v2-green-100;
+
+    h3 {
+        @include font-fira-code($fs: 2.5rem, $fw: 700);
+        color: $color-not-white;
+    }
+
+    p {
+        @include font-karla($fs: 1.5rem, $fw: 500);
+        color: $color-not-white;
+    }
+}
