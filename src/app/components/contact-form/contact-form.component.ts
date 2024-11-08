@@ -5,17 +5,21 @@ import { FormsModule, NgForm } from '@angular/forms';
 import { RouterLink } from '@angular/router';
 import { fadeIn } from "../../shared/animations";
 import { ConfirmPopupComponent } from "../confirm-popup/confirm-popup.component";
+import { NgxTranslateService } from '../../services/ngx-translate.service';
+import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-contact-form',
   standalone: true,
   animations: [fadeIn],
-  imports: [CommonModule, FormsModule, RouterLink, ConfirmPopupComponent],
+  imports: [CommonModule, FormsModule, RouterLink, ConfirmPopupComponent, TranslateModule],
   templateUrl: './contact-form.component.html',
   styleUrl: './contact-form.component.scss',
 })
 export class ContactFormComponent {
   private http = inject(HttpClient);
+  private ngxService = inject(NgxTranslateService);
+
   mailtest = true;
   endPoint = 'https://beta-test.manuel-braun.net/sendMail.php';
   showConfirmPopup = false;
@@ -26,6 +30,10 @@ export class ContactFormComponent {
     message: '',
     acceptPrivacy: false,
   };
+
+  constructor() {
+    this.ngxService.initNgxTranslate();
+  }
 
   onSubmit(ngForm: NgForm) {
     if (ngForm.valid && ngForm.submitted && !this.mailtest) {

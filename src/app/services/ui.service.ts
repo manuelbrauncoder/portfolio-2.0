@@ -4,6 +4,7 @@
 
 import { ViewportScroller } from '@angular/common';
 import { inject, Injectable } from '@angular/core';
+import {Router} from "@angular/router";
 
 @Injectable({
   providedIn: 'root'
@@ -11,6 +12,7 @@ import { inject, Injectable } from '@angular/core';
 export class UiService {
 
   private scroller = inject(ViewportScroller);
+  private router = inject(Router);
 
   showSidebar = false;
 
@@ -31,5 +33,20 @@ export class UiService {
       let yPosition = element.getBoundingClientRect().top + window.scrollY + offset;
       this.scroller.scrollToPosition([0, yPosition]);
     }
+  }
+
+
+  /**
+   * navigate to component and scroll to top after timeout
+   * @param component to navigate
+   * @param position offset
+   */
+  goToComponent(component: string, position: number){
+    this.router.navigate([component]).then(() => {
+      setTimeout(() => {
+        window.scrollTo({top: position});
+      }, 50);
+    });
+
   }
 }
