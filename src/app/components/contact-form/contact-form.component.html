@@ -1,25 +1,33 @@
 <form name="contactForm" #contactForm="ngForm" (ngSubmit)="onSubmit(contactForm)">
 
-  <div class="input-wrapper">
-    <label for="name">What´s your name?</label>
+  <div class="input-wrapper" [ngClass]="{'input-error': !name.valid && name.touched}">
+    <label for="name">{{ 'contact-form.name' | translate }}</label>
     <input [ngClass]="{'placeholder-error': !name.valid && name.touched}"
-      [placeholder]="!name.valid && name.touched ? 'Oops! it seems your name is missing ' : 'Your name goes here'"
-      type="text" id="name" name="name" required minlength="4" [(ngModel)]="contact.name" #name="ngModel">
+      placeholder="{{ 'contact-form.name-ph' | translate }}" type="text" id="name" name="name" required minlength="4"
+      [(ngModel)]="contact.name" #name="ngModel">
+    @if (!name.valid && name.touched) {
+    <span class="hint">{{ 'contact-form.hint1' | translate }}</span>
+    }
   </div>
-  <div class="input-wrapper">
-    <label for="email">What´s your email?</label>
+  <div class="input-wrapper" [ngClass]="{'input-error': !email.valid && email.touched}">
+    <label for="email">{{ 'contact-form.email' | translate }}</label>
     <input [ngClass]="{'placeholder-error': !email.valid && email.touched}"
-      [placeholder]="!email.valid && email.touched ? 'Hoppla! your email is required' : 'youremail@email.com'"
-      type="email" id="email" name="email" pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}" required
-      [(ngModel)]="contact.email" #email="ngModel">
+      placeholder="{{ 'contact-form.email-ph' | translate }}" type="email" id="email" name="email"
+      pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}" required [(ngModel)]="contact.email" #email="ngModel">
+    @if (!email.valid && email.touched) {
+    <span class="hint">{{ 'contact-form.hint2' | translate }}</span>
+    }
   </div>
-  <div class="input-wrapper">
-    <label for="message">How can I help you?</label>
-    <input [ngClass]="{'placeholder-error': !message.valid && message.touched}"
-      [placeholder]="!message.valid && message.touched ? 'What do you need to develop?' : 'Hello Manuel, I am interested in...'"
+  <div class="input-wrapper" [ngClass]="{'input-error': !message.valid && message.touched}">
+    <label for="message">{{ 'contact-form.text' | translate }}</label>
+    <input
+    placeholder="{{ 'contact-form.text-ph' | translate }}"
       type="text" id="message" name="message" required minlength="6" [(ngModel)]="contact.message" #message="ngModel">
+    @if (!message.valid && message.touched) {
+    <span class="hint">{{ 'contact-form.hint3' | translate }}</span>
+    }
   </div>
-  <div class="checkbox-wrapper">
+  <div class="checkbox-wrapper" [ngClass]="{'input-error': !privacy.valid && privacy.touched}">
     <div (click)="toggleCheckbox()" class="custom-check-icon">
       @if (privacy.valid) {
       <img src="assets/icons/contact-check.svg" alt="custom-check-icon">
@@ -28,13 +36,14 @@
       }
     </div>
     <input type="checkbox" [(ngModel)]="contact.acceptPrivacy" id="privacy" name="privacy" required #privacy="ngModel">
-    <label for="privacy">I've read the <a routerLink="/privacy">privacy policy </a>and agree to the processing of my
-      data as outlined.</label>
+    <label for="privacy">{{ 'contact-form.privacy1' | translate }} <a routerLink="/privacy">{{ 'contact-form.privacy2' |
+        translate }} </a>{{ 'contact-form.privacy3' | translate }}</label>
     @if (name.valid && email.valid && message.valid && !privacy.valid) {
-    <span class="hint">Please accept the privacy policy.</span>
+    <span class="hint">{{ 'contact-form.hint4' | translate }}.</span>
     }
   </div>
-  <button [disabled]="!contactForm.valid" type="submit" class="primary-btn"><span>Say Hello ;)</span></button>
+  <button [disabled]="!contactForm.valid" type="submit" class="primary-btn"><span>{{ 'contact-form.btn' | translate
+      }}</span></button>
 </form>
 
 @if (showConfirmPopup) {

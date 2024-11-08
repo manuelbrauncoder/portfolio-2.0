@@ -49,6 +49,31 @@
         "description": "This App is a Slack Clone App. It revolutionizes team communication and collaboration with its intuitive interface, real-time messaging, and robust channel organization."
     }
   },
+  "contact": {
+    "h3": "",
+    "h1-1": "",
+    "h1-2": "",
+    "h3-2": "",
+    "p1": "",
+    "p2": "",
+    "span": ""
+  },
+  "contact-form": {
+    "name": "What´s your name?",
+    "name-ph": "Your name goes here",
+    "email": "What´s your email?",
+    "email-ph": "yourmail@email.com",
+    "text": "How can I help you?",
+    "text-ph": "Hello Manuel, i am interested in...",
+    "privacy1": "I've read the",
+    "privacy2": "privacy policy",
+    "privacy3": "and agree to the processing of my data as outlined.",
+    "hint1": "Oops! it seems your name is missing",
+    "hint2": "Hoppla! your email is required",
+    "hint3": "What do you need to develop?",
+    "hint4": "Please accept the privacy policy.",
+    "btn": "Say hello ;)"
+  },
   "imprint": {
     "headline": "Imprint",
     "according": "According to § 5 TMG",

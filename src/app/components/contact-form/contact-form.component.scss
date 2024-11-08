@@ -9,6 +9,7 @@ form {
 }
 
 .input-wrapper {
+    position: relative;
     border-top: 1px solid $color-v2-green-50;
     width: 100%;
     padding: 1.25rem;
@@ -99,10 +100,8 @@ form {
     left: 1.25rem;
 }
 
-.placeholder-error {
-    &::placeholder {
-        color: $color-error-red;
-    }
+.input-error {
+    border-top: 1px solid $color-error-red;
 }
 
 input:-webkit-autofill,
