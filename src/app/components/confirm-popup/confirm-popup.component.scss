@@ -5,19 +5,13 @@
     padding: 2.5rem;
     border-radius: 1.875rem;
     border: 1px solid $color-v2-green-100;
+    max-width: 400px;
+    @include dFlex($fd: column, $g: 1rem);
 
     h3 {
         @include font-fira-code($fs: 2rem, $fw: 700);
         color: $color-not-white;
     }
-
-    img {
-        width: 180px;
-        height: auto;
-        border-radius: 100%;
-    }
-
-
 
     p {
         @include font-karla($fs: 1.2rem, $fw: 500);

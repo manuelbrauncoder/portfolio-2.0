@@ -2,7 +2,6 @@ import { CommonModule } from '@angular/common';
 import { HttpClient } from '@angular/common/http';
 import { Component, inject } from '@angular/core';
 import { FormsModule, NgForm } from '@angular/forms';
-import { RouterLink } from '@angular/router';
 import { fadeIn } from "../../shared/animations";
 import { ConfirmPopupComponent } from "../confirm-popup/confirm-popup.component";
 import { NgxTranslateService } from '../../services/ngx-translate.service';
@@ -13,7 +12,7 @@ import { UiService } from '../../services/ui.service';
   selector: 'app-contact-form',
   standalone: true,
   animations: [fadeIn],
-  imports: [CommonModule, FormsModule, RouterLink, ConfirmPopupComponent, TranslateModule],
+  imports: [CommonModule, FormsModule, ConfirmPopupComponent, TranslateModule],
   templateUrl: './contact-form.component.html',
   styleUrl: './contact-form.component.scss',
 })
