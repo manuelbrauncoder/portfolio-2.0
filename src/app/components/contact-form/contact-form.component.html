@@ -36,7 +36,7 @@
       }
     </div>
     <input type="checkbox" [(ngModel)]="contact.acceptPrivacy" id="privacy" name="privacy" required #privacy="ngModel">
-    <label for="privacy">{{ 'contact-form.privacy1' | translate }} <a routerLink="/privacy">{{ 'contact-form.privacy2' |
+    <label for="privacy">{{ 'contact-form.privacy1' | translate }} <a (click)="uiService.goToComponent('/privacy', 0)">{{ 'contact-form.privacy2' |
         translate }} </a>{{ 'contact-form.privacy3' | translate }}</label>
     @if (name.valid && email.valid && message.valid && !privacy.valid) {
     <span class="hint">{{ 'contact-form.hint4' | translate }}.</span>

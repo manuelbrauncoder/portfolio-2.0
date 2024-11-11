@@ -7,6 +7,7 @@ import { fadeIn } from "../../shared/animations";
 import { ConfirmPopupComponent } from "../confirm-popup/confirm-popup.component";
 import { NgxTranslateService } from '../../services/ngx-translate.service';
 import { TranslateModule } from '@ngx-translate/core';
+import { UiService } from '../../services/ui.service';
 
 @Component({
   selector: 'app-contact-form',
@@ -19,6 +20,7 @@ import { TranslateModule } from '@ngx-translate/core';
 export class ContactFormComponent {
   private http = inject(HttpClient);
   private ngxService = inject(NgxTranslateService);
+  uiService = inject(UiService);
 
   mailtest = true;
   endPoint = 'https://beta-test.manuel-braun.net/sendMail.php';

@@ -1,0 +1,39 @@
+@use '../../../styles.scss' as *;
+
+.background {
+    @include dFlex($fd: column, $g: 32px);
+    background: linear-gradient(180deg, rgba(28, 28, 28, 0) 0%, $color-black-bg 100%),
+        linear-gradient(45deg, $color-black-bg 30%, $color-green-bg 70%);
+    padding: 120px 64px;
+
+    @media(max-width: 599px) {
+        padding: 120px 16px;
+    }
+}
+
+section {
+    max-width: 80ch;
+    margin-inline: auto;
+    min-height: 100dvh;
+    @include font-karla($fs: 1rem, $fw: 400);
+    color: white;
+    @include dFlex($fd: column, $ai: flex-start, $g: 1.5rem);
+}
+
+.backBtn {
+    transform: rotate(-90deg);
+    height: 39px;
+    width: 39px;
+    cursor: pointer;
+
+    &:hover {
+        rect {
+            stroke: $color-v2-green-100;
+        }
+
+        path {
+            stroke: $color-v2-green-100;
+            fill: $color-v2-green-100;
+        }
+    }
+}
