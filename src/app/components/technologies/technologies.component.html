@@ -13,8 +13,8 @@
         <div class="skills">
             @for (skill of skills; track $index) {
                 <div class="skill">
-                    <img src="{{ skill.imgPath }}" alt="">
-                    <span>{{ skill.skill }}</span>
+                    <img class="skill-icon" src="{{ skill.path }}" alt="{{ skill.title }} Icon">
+                    <span>{{ skill.title }}</span>
                 </div>
             }
             

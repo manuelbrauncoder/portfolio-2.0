@@ -8,10 +8,12 @@
     @media(max-width: 899px) {
         padding: 2rem 1rem;
     }
+
     @media(max-width: 1099px) {
         flex-direction: column;
         align-items: center;
     }
+
     width: 100%;
     max-width: $content-limit;
     margin: 0 auto;
@@ -29,6 +31,7 @@
             @media(max-width: 999px) {
                 max-width: 31.25rem;
             }
+
             border: 1px solid $color-v2-green-100;
             background-color: $color-v2-green-10;
             border-radius: 1.875rem;
@@ -77,6 +80,7 @@
             max-width: 31.25rem;
             gap: 3rem;
         }
+
         @include dFlex($jc: flex-start, $ai: flex-start, $g: 4.5rem);
         flex-wrap: wrap;
         flex: 2;
@@ -88,16 +92,17 @@
             @include dFlex($fd: column, $g: 0.5rem);
             width: 6.5rem;
             height: 7.25rem;
-        
+
             &:hover img {
                 scale: 1.15;
                 @extend .hover-transition;
             }
 
-            img {
+            .skill-icon {
                 @extend .hover-transition;
                 width: 4rem;
                 height: 4rem;
+                filter: invert(1);
             }
 
             span {
