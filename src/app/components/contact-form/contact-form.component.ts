@@ -9,12 +9,11 @@ import { TranslateModule } from '@ngx-translate/core';
 import { UiService } from '../../services/ui.service';
 
 @Component({
-  selector: 'app-contact-form',
-  standalone: true,
-  animations: [fadeIn],
-  imports: [CommonModule, FormsModule, ConfirmPopupComponent, TranslateModule],
-  templateUrl: './contact-form.component.html',
-  styleUrl: './contact-form.component.scss',
+    selector: 'app-contact-form',
+    animations: [fadeIn],
+    imports: [CommonModule, FormsModule, ConfirmPopupComponent, TranslateModule],
+    templateUrl: './contact-form.component.html',
+    styleUrl: './contact-form.component.scss'
 })
 export class ContactFormComponent {
   private http = inject(HttpClient);

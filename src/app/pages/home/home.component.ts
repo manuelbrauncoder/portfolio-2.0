@@ -7,11 +7,10 @@ import { ReferencesComponent } from "../../components/references/references.comp
 import { ContactComponent } from "../../components/contact/contact.component";
 
 @Component({
-  selector: 'app-home',
-  standalone: true,
-  imports: [HeroComponent, AboutMeComponent, TechnologiesComponent, PortfolioComponent, ReferencesComponent, ContactComponent],
-  templateUrl: './home.component.html',
-  styleUrl: './home.component.scss'
+    selector: 'app-home',
+    imports: [HeroComponent, AboutMeComponent, TechnologiesComponent, PortfolioComponent, ReferencesComponent, ContactComponent],
+    templateUrl: './home.component.html',
+    styleUrl: './home.component.scss'
 })
 export class HomeComponent {
 

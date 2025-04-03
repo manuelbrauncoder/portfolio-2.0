@@ -4,11 +4,10 @@ import { NgxTypedWriterModule } from 'ngx-typed-writer';
 import { NgxTranslateService } from '../../services/ngx-translate.service';
 import { UiService } from '../../services/ui.service';
 @Component({
-  selector: 'app-hero',
-  standalone: true,
-  imports: [NgxTypedWriterModule, TranslateModule],
-  templateUrl: './hero.component.html',
-  styleUrl: './hero.component.scss'
+    selector: 'app-hero',
+    imports: [NgxTypedWriterModule, TranslateModule],
+    templateUrl: './hero.component.html',
+    styleUrl: './hero.component.scss'
 })
 export class HeroComponent implements OnInit {
 

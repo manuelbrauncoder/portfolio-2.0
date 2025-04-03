@@ -6,12 +6,11 @@ import { TranslateModule } from '@ngx-translate/core';
 import { NgxTranslateService } from '../../services/ngx-translate.service';
 
 @Component({
-  selector: 'app-portfolio',
-  standalone: true,
-  imports: [CommonModule, ProjectComponent, TranslateModule],
-  animations: [fadeIn],
-  templateUrl: './portfolio.component.html',
-  styleUrl: './portfolio.component.scss'
+    selector: 'app-portfolio',
+    imports: [CommonModule, ProjectComponent, TranslateModule],
+    animations: [fadeIn],
+    templateUrl: './portfolio.component.html',
+    styleUrl: './portfolio.component.scss'
 })
 export class PortfolioComponent {
 

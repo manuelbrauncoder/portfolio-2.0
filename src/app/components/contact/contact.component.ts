@@ -4,11 +4,10 @@ import { TranslateModule } from '@ngx-translate/core';
 import { NgxTranslateService } from '../../services/ngx-translate.service';
 
 @Component({
-  selector: 'app-contact',
-  standalone: true,
-  imports: [ContactFormComponent, TranslateModule],
-  templateUrl: './contact.component.html',
-  styleUrl: './contact.component.scss'
+    selector: 'app-contact',
+    imports: [ContactFormComponent, TranslateModule],
+    templateUrl: './contact.component.html',
+    styleUrl: './contact.component.scss'
 })
 export class ContactComponent {
 

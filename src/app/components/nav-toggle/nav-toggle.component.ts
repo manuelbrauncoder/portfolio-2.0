@@ -5,11 +5,10 @@ import { TranslateModule } from '@ngx-translate/core';
 import { NgxTranslateService } from '../../services/ngx-translate.service';
 
 @Component({
-  selector: 'app-nav-toggle',
-  standalone: true,
-  imports: [CommonModule, TranslateModule],
-  templateUrl: './nav-toggle.component.html',
-  styleUrl: './nav-toggle.component.scss',
+    selector: 'app-nav-toggle',
+    imports: [CommonModule, TranslateModule],
+    templateUrl: './nav-toggle.component.html',
+    styleUrl: './nav-toggle.component.scss'
 })
 export class NavToggleComponent {
   @Input() inSidebar = false;

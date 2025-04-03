@@ -7,12 +7,11 @@ import { NgxTranslateService } from '../../services/ngx-translate.service';
 import { UiService } from '../../services/ui.service';
 
 @Component({
-  selector: 'app-technologies',
-  standalone: true,
-  animations: [fadeIn],
-  imports: [GrowthPopupComponent, TranslateModule],
-  templateUrl: './technologies.component.html',
-  styleUrl: './technologies.component.scss'
+    selector: 'app-technologies',
+    animations: [fadeIn],
+    imports: [GrowthPopupComponent, TranslateModule],
+    templateUrl: './technologies.component.html',
+    styleUrl: './technologies.component.scss'
 })
 export class TechnologiesComponent {
 

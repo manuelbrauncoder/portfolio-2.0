@@ -15,11 +15,10 @@ import Autoplay from 'embla-carousel-autoplay';
 import { CommonModule } from '@angular/common';
 
 @Component({
-  selector: 'app-references',
-  standalone: true,
-  imports: [ReferenceComponent, EmblaCarouselDirective, CommonModule],
-  templateUrl: './references.component.html',
-  styleUrl: './references.component.scss',
+    selector: 'app-references',
+    imports: [ReferenceComponent, EmblaCarouselDirective, CommonModule],
+    templateUrl: './references.component.html',
+    styleUrl: './references.component.scss'
 })
 export class ReferencesComponent implements AfterViewInit {
   @ViewChild(EmblaCarouselDirective) emblaRef!: EmblaCarouselDirective;

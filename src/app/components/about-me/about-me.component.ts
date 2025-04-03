@@ -3,11 +3,10 @@ import { TranslateModule } from '@ngx-translate/core';
 import { NgxTranslateService } from '../../services/ngx-translate.service';
 
 @Component({
-  selector: 'app-about-me',
-  standalone: true,
-  imports: [TranslateModule],
-  templateUrl: './about-me.component.html',
-  styleUrl: './about-me.component.scss'
+    selector: 'app-about-me',
+    imports: [TranslateModule],
+    templateUrl: './about-me.component.html',
+    styleUrl: './about-me.component.scss'
 })
 export class AboutMeComponent {
   
