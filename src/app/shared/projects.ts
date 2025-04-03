@@ -87,3 +87,7 @@ export const epl: Project = {
     github: "https://github.com/manuelbrauncoder/my-da-bubble",
     imgPath: "assets/img/portfolio-epl.png"
 }
+
+export const projects: Project[] = [
+    dabubble, join, epl
+]

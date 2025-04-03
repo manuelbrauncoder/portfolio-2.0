@@ -1,0 +1,43 @@
+@use '../../../styles.scss' as *;
+
+.content-background {
+    background-color: $color-black-bg;
+
+    section {
+        max-width: $content-limit;
+        margin: 0 auto;
+        padding: 6rem;
+        color: white;
+
+        .projects {
+            @include dFlex($fd: column, $g: 1rem);
+
+            .project {
+                @include dFlex($jc: space-between);
+
+                .project-info {
+                    width: 50%;
+                }
+
+                .skills {
+                    @include dFlex($g: 0.25rem);
+
+                    .skill {
+                        span:last-child {
+                            margin-left: 0.25rem;
+                        }
+                    }
+                }
+
+                .img-wrapper {
+                    width: 50%;
+                    @include dFlex();
+
+                    img {
+                        height: 200px;
+                    }
+                }
+            }
+        }
+    }
+}

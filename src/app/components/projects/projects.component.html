@@ -1,0 +1,32 @@
+<div class="content-background">
+    <section>
+        <div class="projects">
+            @for (project of projects; track $index) {
+            <div class="project">
+                <div class="project-info">
+                    <h2>{{ project.title }}</h2>
+                    <div class="skills">
+                        @for (skill of project.skills; track $index; let index = $index) {
+                        <div class="skill">
+                            <span>{{ skill.name }}</span>
+                            @if (index !== projects.length + 1) {
+                            <span>|</span>
+                            }
+                        </div>
+                        }
+                    </div>
+                    @if (ngxService.getCurrentLanguage() == language.english) {
+                    <p>{{ project.description_en }}</p>
+                    } @else if(ngxService.getCurrentLanguage() == language.german) {
+                    <p>{{ project.description_de }}</p>
+                    }
+                </div>
+            
+            <div class="img-wrapper">
+                <img src="{{ project.imgPath }}" alt="image of{{ project.title }}">
+            </div>
+            </div>
+            }
+        </div>
+    </section>
+</div>
