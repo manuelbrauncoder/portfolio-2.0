@@ -9,6 +9,7 @@
     <span class="hint">{{ 'contact-form.hint1' | translate }}</span>
     }
   </div>
+
   <div class="input-wrapper" [ngClass]="{'input-error': !email.valid && email.touched}">
     <label for="email">{{ 'contact-form.email' | translate }}</label>
     <input [ngClass]="{'placeholder-error': !email.valid && email.touched}"
@@ -18,6 +19,7 @@
     <span class="hint">{{ 'contact-form.hint2' | translate }}</span>
     }
   </div>
+
   <div class="input-wrapper" [ngClass]="{'input-error': !message.valid && message.touched}">
     <label for="message">{{ 'contact-form.text' | translate }}</label>
     <input
@@ -27,6 +29,7 @@
     <span class="hint">{{ 'contact-form.hint3' | translate }}</span>
     }
   </div>
+
   <div class="checkbox-wrapper" [ngClass]="{'input-error': !privacy.valid && privacy.touched}">
     <div (click)="toggleCheckbox()" class="custom-check-icon">
       @if (privacy.valid) {
@@ -42,13 +45,15 @@
     <span class="hint">{{ 'contact-form.hint4' | translate }}.</span>
     }
   </div>
+
   <button [disabled]="!contactForm.valid" type="submit" class="primary-btn"><span>{{ 'contact-form.btn' | translate
       }}</span></button>
+
 </form>
 
 @if (showConfirmPopup) {
 <div @fadeIn class="popup-center">
-  <app-confirm-popup></app-confirm-popup>
+  <app-confirm-popup [message]="popupMessage"></app-confirm-popup>
 </div>
 <div class="popup-bg"></div>
 }
