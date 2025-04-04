@@ -7,14 +7,10 @@
     border: 1px solid $color-v2-green-100;
     border-radius: 100vw;
     position: fixed;
-    bottom: 15%;
+    bottom: 1rem;
     right: 1rem;
     background-color: $color-v2-green-10;
     cursor: pointer;
-
-    @media(max-width: 899px) {
-        bottom: 1rem;
-    }
 
     svg {
         animation: 1.2s move-arrow infinite ease-in-out;

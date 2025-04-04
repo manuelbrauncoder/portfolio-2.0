@@ -1,9 +1,11 @@
 import { Component, HostListener, inject } from '@angular/core';
 import { UiService } from '../../services/ui.service';
+import { slideIn } from '../../shared/animations';
 
 @Component({
   selector: 'app-arrow-up',
   imports: [],
+  animations: [slideIn],
   templateUrl: './arrow-up.component.html',
   styleUrl: './arrow-up.component.scss'
 })
