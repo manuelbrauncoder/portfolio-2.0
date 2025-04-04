@@ -59,8 +59,8 @@ export const join: Project = {
             imgPath: 'assets/img/skills-css-green.svg'
         },
     ],
-    link: "https://da-bubble.manuel-braun.net/login",
-    github: "https://github.com/manuelbrauncoder/my-da-bubble",
+    link: "https://join-360.manuel-braun.net/",
+    github: "https://github.com/manuelbrauncoder/Join-2.0",
     imgPath: "assets/img/portfolio-join.png"
 }
 
@@ -83,8 +83,8 @@ export const epl: Project = {
             imgPath: 'assets/img/skills-css-green.svg'
         },
     ],
-    link: "https://da-bubble.manuel-braun.net/login",
-    github: "https://github.com/manuelbrauncoder/my-da-bubble",
+    link: "https://el-pollo-loco.manuel-braun.net/",
+    github: "https://github.com/manuelbrauncoder/El-Pollo-Loco",
     imgPath: "assets/img/portfolio-epl.png"
 }
 

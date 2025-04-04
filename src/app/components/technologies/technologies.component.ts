@@ -5,11 +5,12 @@ import { fadeIn } from '../../shared/animations';
 import { TranslateModule } from '@ngx-translate/core';
 import { NgxTranslateService } from '../../services/ngx-translate.service';
 import { UiService } from '../../services/ui.service';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-technologies',
   animations: [fadeIn],
-  imports: [GrowthPopupComponent, TranslateModule],
+  imports: [GrowthPopupComponent, TranslateModule, CommonModule],
   templateUrl: './technologies.component.html',
   styleUrl: './technologies.component.scss',
 })

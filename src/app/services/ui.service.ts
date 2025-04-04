@@ -35,6 +35,13 @@ export class UiService {
     }
   }
 
+  /**
+   * Scroll to the top of the page
+   */
+  scrollToTop() {
+    this.scroller.scrollToPosition([0, 0])
+  }
+
 
   /**
    * navigate to component and scroll to top after timeout

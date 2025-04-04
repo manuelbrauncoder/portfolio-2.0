@@ -4,10 +4,11 @@ import { HeaderComponent } from "./shared/header/header.component";
 import { FooterComponent } from "./shared/footer/footer.component";
 import { CommonModule } from '@angular/common';
 import { BreakpointObserverService } from './services/breakpoint-observer.service';
+import { ArrowUpComponent } from "./components/arrow-up/arrow-up.component";
 
 @Component({
     selector: 'app-root',
-    imports: [RouterOutlet, HeaderComponent, FooterComponent, CommonModule],
+    imports: [RouterOutlet, HeaderComponent, FooterComponent, CommonModule, ArrowUpComponent],
     templateUrl: './app.component.html',
     styleUrl: './app.component.scss'
 })

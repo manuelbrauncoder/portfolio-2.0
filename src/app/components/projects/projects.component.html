@@ -20,10 +20,21 @@
                     } @else if(ngxService.getCurrentLanguage() == language.german) {
                     <p>{{ project.description_de }}</p>
                     }
+                    <div class="btns">
+                        <button class="secondary-btn">
+                            <a href="{{ project.github }}" target="_blank">Gibhub</a>
+                            <img src="assets/icons/project-arrow-up-right.svg" alt="arrow icon">
+                        </button>
+                        <button class="secondary-btn">
+                            <a href="{{ project.link }}" target="_blank">Live Test</a>
+                            <img src="assets/icons/project-arrow-up-right.svg" alt="arrow icon">
+                        </button>
+                    </div>
                 </div>
             
             <div class="img-wrapper">
                 <img src="{{ project.imgPath }}" alt="image of{{ project.title }}">
+                <img class="lines" src="assets/img/portfolio-diagonal-lines.png" alt="image of green lines">
             </div>
             </div>
             }

@@ -1,0 +1,37 @@
+@use '../../../styles.scss' as *;
+
+.arrow {
+    @include dFlex();
+    width: 1.875rem;
+    height: 3rem;
+    border: 1px solid $color-v2-green-100;
+    border-radius: 100vw;
+    position: fixed;
+    bottom: 15%;
+    right: 1rem;
+    background-color: $color-v2-green-10;
+    cursor: pointer;
+
+    @media(max-width: 899px) {
+        bottom: 1rem;
+    }
+
+    svg {
+        animation: 1.2s move-arrow infinite ease-in-out;
+        transform: rotate(180deg);
+    }
+
+    @keyframes move-arrow {
+        0% {
+            transform: rotate(180deg) translateY(-0.1875rem);
+        }
+    
+        50% {
+            transform: rotate(180deg) translateY(0.1875rem);
+        }
+    
+        100% {
+            transform: rotate(180deg) translateY(-0.1875rem);
+        }
+    }
+}

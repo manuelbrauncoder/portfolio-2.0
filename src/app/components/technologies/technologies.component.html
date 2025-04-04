@@ -5,34 +5,38 @@
             <div class="box">
                 <h2>{{ 'technologies.h2' | translate }}</h2>
                 <p class="subheadline">{{ 'technologies.description' | translate }}</p>
-                <h3>{{ 'technologies.question1' | translate }} <span>{{ 'technologies.question2' | translate }}</span></h3>
+                <h3>{{ 'technologies.question1' | translate }} <span>{{ 'technologies.question2' | translate }}</span>
+                </h3>
                 <p>{{ 'technologies.contact me' | translate }}</p>
-                <button (click)="uiService.scrollToAnchor('contact-anchor', -50)" class="primary-btn"><span>{{ 'technologies.btn' | translate }}</span></button>
+                <button (click)="uiService.scrollToAnchor('contact-anchor', -50)" class="primary-btn"><span>{{
+                        'technologies.btn' | translate }}</span></button>
             </div>
         </div>
         <div class="skills">
             @for (skill of skills; track $index) {
-                <div class="skill">
-                    <img class="skill-icon" src="{{ skill.path }}" alt="{{ skill.title }} Icon">
-                    <span>{{ skill.title }}</span>
-                </div>
+            <div class="skill">
+                <img class="skill-icon" [ngStyle]="{'transform': skill.scale ? 'scale(1.3)' : 'scale(1)'}"
+                    src="{{ skill.path }}" alt="{{ skill.title }}
+                   Icon">
+                <span>{{ skill.title }}</span>
+            </div>
             }
-            
+
             <div class="skill-wrapper">
                 <div (mouseover)="handleMouseHover()" (mouseleave)="handleMouseLeave()" class="skill">
                     <img src="assets/img/skills-growth.svg" alt="">
                     <span>Growth mindset</span>
-                    
+
                 </div>
                 @if (showGrowthPopup) {
-                    <div @fadeIn class="growth-popup">
-                        <app-growth-popup></app-growth-popup>
-                    </div>
-                    
+                <div @fadeIn class="growth-popup">
+                    <app-growth-popup></app-growth-popup>
+                </div>
+
                 }
-                
+
             </div>
-            
+
         </div>
     </div>
 </div>
