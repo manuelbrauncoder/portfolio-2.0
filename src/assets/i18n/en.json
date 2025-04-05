@@ -4,6 +4,10 @@
     "skills": "Skills",
     "projects": "Projects"
   },
+  "footer": {
+    "title": "Frontend Developer",
+    "location": "Partenstein Germany"
+  },
   "hero": {
     "dev": "Frontend Developer",
     "btn1": "Check my work",
@@ -29,6 +33,11 @@
     "2": "I am open-minded and always looking for personal challenges to constantly improve my knowledge and skills.",
     "3": "In my profession, programming isn't just about writing code; it's a creative form of problem-solving. I take pride in my ability to distill complex technical challenges into simple, user-friendly solutions. This way, I help you achieve your goals and bring your visions to life."
   },
+  "growth": {
+    "headline": "Don't see the skill you're looking for?",
+    "p": "In software development, it's my daily routine to continually expand my knowledge.",
+    "p2": "I have a special interest in learning"
+  },
   "technologies": {
     "h3": "Technologies",
     "h2": "Skill Set",
@@ -45,13 +54,13 @@
     "project-h3": "What is this project about?",
     "project-btn": "Next project",
     "project1": {
-        "description": "This App is a Slack Clone App. It revolutionizes team communication and collaboration with its intuitive interface, real-time messaging, and robust channel organization."
+        "description": "A Messenger like Slack. Communicate with your team through channels or send private messages to other users. A global search feature makes it easy to find messages, users or channels. Share images or PDFs directly in the chat."
     },
     "project2": {
-        "description": "This App is a Slack Clone App. It revolutionizes team communication and collaboration with its intuitive interface, real-time messaging, and robust channel organization."
+        "description": "Task manager inspired by the Kanban System. Create and organize tasks, using drag and drop functions, and assign users and categories."
     },
     "project3": {
-        "description": "This App is a Slack Clone App. It revolutionizes team communication and collaboration with its intuitive interface, real-time messaging, and robust channel organization."
+        "description": "A simple Jump-and-Run game based on an object-oriented approach. Help Pepe to find coins and salsa bottles to fight against the killer chicken."
     }
   },
   "contact": {

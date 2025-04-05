@@ -14,7 +14,29 @@
         }
 
         .projects {
-            @include dFlex($fd: column, $g: 4rem);
+            @include dFlex($fd: column, $g: 3rem);
+
+            .headline {
+                @include dFlex($fd: column, $ai: flex-start, $g: 0.25rem);
+                width: 100%;
+                margin-bottom: -4rem;
+
+                h3 {
+                    @include font-karla($fs: 1.5rem, $fw: 700);
+                    color: $color-v2-green-100;
+                }
+
+                p {
+                    @include font-karla($fs: 1.125rem, $fw: 400);
+                    color: white;
+                    max-width: 45ch;
+                    margin-bottom: 1.25rem;
+                }
+
+                @media(max-width: 999px) {
+                    margin: -2rem;
+                }
+            }
 
             .project {
                 @include dFlex($jc: space-between);
@@ -87,23 +109,30 @@
                 }
 
                 .img-wrapper {
-                    width: 400px;
-                    height: 250px;
+                    width: 40%;
+                    height: 350px;
                     max-width: 50%;
                     @include dFlex();
                     transform: translateY(4.375rem);
                     position: relative;
 
+                    &:hover img {
+                        scale: 1.25;
+                        @extend .hover-transition;
+
+                        @media(max-width: 999px) {
+                            scale: unset;
+                        }
+                    }
+
                     img {
                         position: absolute;
                         width: 100%;
+                        max-width: 500px;
                         height: 100%;
-                        object-fit: fill;
+                        object-fit: contain;
                         z-index: 3;
-
-                        @media(max-width: 999px) {
-                            object-fit: contain;
-                        }
+                        @extend .hover-transition
                     }
 
                     .lines {

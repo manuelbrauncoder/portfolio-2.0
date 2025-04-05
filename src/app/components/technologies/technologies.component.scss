@@ -128,4 +128,8 @@
     border-radius: 1.875rem;
     padding: 2rem;
     z-index: 5;
+
+    @media(max-width: 999px) {
+        left: -9rem;
+    }
 }

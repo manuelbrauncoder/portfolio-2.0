@@ -15,7 +15,7 @@
         <div class="skills">
             @for (skill of skills; track $index) {
             <div class="skill">
-                <img class="skill-icon" [ngStyle]="{'transform': skill.scale ? 'scale(1.3)' : 'scale(1)'}"
+                <img class="skill-icon" [ngStyle]="{ 'transform': 'scale(' + skill.scale + ')' }"
                     src="{{ skill.path }}" alt="{{ skill.title }}
                    Icon">
                 <span>{{ skill.title }}</span>

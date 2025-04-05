@@ -2,11 +2,12 @@
     <div class="hero-content">
         <div class="center">
             <h3>{{ 'hero.dev' | translate }}</h3>
-            <ngx-typed-writer class="my-name" [strings]="words" [typeSpeed]="300" [isHTML]="true"
-                [showCursor]="showcursor" [cursorChar]="'|'" [loop]="false" [fadeOut]="true"></ngx-typed-writer>
+            <h1 class="my-name">Manuel Braun</h1>
             <div class="btns">
-                <button (click)="uiService.scrollToAnchor('projects-anchor', -50)" class="primary-btn"><span>{{ 'hero.btn1' | translate }}</span></button>
-                <button (click)="uiService.scrollToAnchor('contact-anchor', -50)" class="primary-btn"><span>{{ 'hero.btn2' | translate }}</span></button>
+                <button (click)="uiService.scrollToAnchor('projects-anchor', -50)" class="primary-btn"><span>{{
+                        'hero.btn1' | translate }}</span></button>
+                <button (click)="uiService.scrollToAnchor('contact-anchor', -50)" class="primary-btn"><span>{{
+                        'hero.btn2' | translate }}</span></button>
             </div>
         </div>
 
@@ -34,7 +35,7 @@
                             fill="#3DCFB6" />
                     </svg>
                 </a>
-                
+
                 <hr class="dot">
             </div>
 
@@ -46,7 +47,7 @@
                             fill="#3DCFB6" />
                     </svg>
                 </a>
-                
+
                 <hr class="dot">
             </div>
             <hr class="line">

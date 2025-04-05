@@ -1,6 +1,10 @@
 <div class="content-background">
     <section>
         <div class="projects">
+            <div class="headline">
+                <h3 id="projects-anchor">{{ 'portfolio.h3' | translate }}</h3>
+                <p>{{ 'portfolio.description' | translate }}</p>
+            </div>
             @for (project of projects; track $index) {
             <div class="project">
                 <div class="project-info">
@@ -31,11 +35,12 @@
                         </button>
                     </div>
                 </div>
-            
-            <div class="img-wrapper">
-                <img src="{{ project.imgPath }}" alt="image of{{ project.title }}">
-                <img class="lines" src="assets/img/portfolio-diagonal-lines.png" alt="image of green lines">
-            </div>
+
+                <a href="{{ project.link }}" target="_blank" class="img-wrapper">
+                    <img src="{{ project.imgPath }}" alt="image of {{ project.title }}">
+                    <img class="lines" src="assets/img/portfolio-diagonal-lines.png" alt="image of green lines">
+                </a>
+
             </div>
             }
         </div>

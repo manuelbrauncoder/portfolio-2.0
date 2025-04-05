@@ -20,7 +20,7 @@ export class ContactFormComponent {
   private ngxService = inject(NgxTranslateService);
   uiService = inject(UiService);
 
-  mailtest = true;
+  mailtest = false;
   endPoint = 'https://beta-test.manuel-braun.net/sendMail.php';
   showConfirmPopup = false;
   popupMessage = '';

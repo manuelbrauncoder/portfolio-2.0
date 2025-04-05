@@ -1,13 +1,18 @@
 @use '../../../styles.scss' as *;
 
 .wrapper {
-    @include dFlex($fd: column, $g: 1rem);
+    @include dFlex($fd: column, $g: 1rem, $ai: flex-start);
+    max-width: 45ch;
 
     h3 {
-        @include font-karla($fs: 1rem, $fw: 400);
+        @include font-fira-code($fs: 1rem, $fw: 400);
         color: $color-v2-green-100;
         white-space: nowrap;
         text-align: center;
+    }
+
+    p {
+        @include font-karla($fs: 1.125rem, $fw: 400);
     }
     
     .growth-skills {

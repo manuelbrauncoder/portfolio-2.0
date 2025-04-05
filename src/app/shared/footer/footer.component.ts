@@ -1,15 +1,15 @@
-import {Component, inject} from '@angular/core';
-import { RouterLink } from '@angular/router';
-import {UiService} from "../../services/ui.service";
+import { Component, inject } from '@angular/core';
+import { UiService } from '../../services/ui.service';
+import { NgxTranslateService } from '../../services/ngx-translate.service';
+import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
-    selector: 'app-footer',
-    imports: [RouterLink],
-    templateUrl: './footer.component.html',
-    styleUrl: './footer.component.scss'
+  selector: 'app-footer',
+  imports: [TranslateModule],
+  templateUrl: './footer.component.html',
+  styleUrl: './footer.component.scss',
 })
 export class FooterComponent {
-
   uiService = inject(UiService);
-
+  ngxService = inject(NgxTranslateService);
 }
