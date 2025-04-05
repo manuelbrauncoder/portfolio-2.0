@@ -17,19 +17,18 @@
             @include dFlex($fd: column, $g: 3rem);
 
             .headline {
-                @include dFlex($fd: column, $ai: flex-start, $g: 0.25rem);
+                @include dFlex($fd: column, $g: 0.25rem);
                 width: 100%;
-                margin-bottom: -4rem;
+                padding: 0 2rem;
 
                 h3 {
-                    @include font-karla($fs: 1.5rem, $fw: 700);
+                    @include font-karla($fs: 6rem, $fw: 700);
                     color: $color-v2-green-100;
                 }
 
                 p {
                     @include font-karla($fs: 1.125rem, $fw: 400);
                     color: white;
-                    max-width: 45ch;
                     margin-bottom: 1.25rem;
                 }
 
@@ -39,7 +38,7 @@
             }
 
             .project {
-                @include dFlex($jc: space-between);
+                @include dFlex($jc: space-around);
                 width: 100%;
 
                 @media(max-width: 999px) {
@@ -49,7 +48,7 @@
                 }
 
                 .project-info {
-                    width: 50%;
+                    max-width: 50%;
                     @include dFlex($ai: flex-start, $fd: column, $g: 1rem);
                     border-radius: 1.875rem;
                     border: 0.0625rem solid $color-v2-green-100;
@@ -102,6 +101,7 @@
 
                     @media(max-width: 999px) {
                         width: unset;
+                        max-width: unset;
                         border: unset;
                         background: unset;
                         padding: 0;

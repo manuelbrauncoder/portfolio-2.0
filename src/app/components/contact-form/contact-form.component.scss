@@ -6,6 +6,10 @@ form {
     button {
         margin: auto;
     }
+
+    @media(max-width: 999px) {
+        width: 100%;
+    }
 }
 
 .input-wrapper {
