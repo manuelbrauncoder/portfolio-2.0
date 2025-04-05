@@ -24,6 +24,7 @@
                 h3 {
                     @include font-karla($fs: 6rem, $fw: 700);
                     color: $color-v2-green-100;
+                    margin-top: 2rem;
                 }
 
                 p {
