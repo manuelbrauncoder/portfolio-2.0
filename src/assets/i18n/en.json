@@ -13,16 +13,16 @@
     "btn1": "Check my work",
     "btn2": "Contact me",
     "marquee": {
-      "1": "Available for remote work",
-      "2": "Frontend Developer",
-      "3": "Based in Partenstein / Spessart",
-      "4": "Open mindset",
-      "5": "Continuous learner",
-      "6": "Teamplayer",
-      "7": "Angular",
-      "8": "TypeScript",
-      "9": "Swift",
-      "10": "Swift UI"
+      "1": "Angular",
+      "2": "TypeScript",
+      "3": "Swift",
+      "4": "Swift UI",
+      "5": "Available for remote work",
+      "6": "Frontend Developer",
+      "7": "Based in Partenstein / Spessart",
+      "8": "Open mindset",
+      "9": "Continuous learner",
+      "10": "Teamplayer"
     }
   },
   "about": {
@@ -54,13 +54,13 @@
     "project-h3": "What is this project about?",
     "project-btn": "Next project",
     "project1": {
-        "description": "A Messenger like Slack. Communicate with your team through channels or send private messages to other users. A global search feature makes it easy to find messages, users or channels. Share images or PDFs directly in the chat."
+      "description": "A Messenger like Slack. Communicate with your team through channels or send private messages to other users. A global search feature makes it easy to find messages, users or channels. Share images or PDFs directly in the chat."
     },
     "project2": {
-        "description": "Task manager inspired by the Kanban System. Create and organize tasks, using drag and drop functions, and assign users and categories."
+      "description": "Task manager inspired by the Kanban System. Create and organize tasks, using drag and drop functions, and assign users and categories."
     },
     "project3": {
-        "description": "A simple Jump-and-Run game based on an object-oriented approach. Help Pepe to find coins and salsa bottles to fight against the killer chicken."
+      "description": "A simple Jump-and-Run game based on an object-oriented approach. Help Pepe to find coins and salsa bottles to fight against the killer chicken."
     }
   },
   "contact": {

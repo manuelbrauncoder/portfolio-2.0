@@ -1,13 +1,18 @@
 @use '../../../styles.scss' as *;
 
 .my-name {
-    @media(max-width: 999px) {
-        font-size: 6rem;
-    }
     @include font-karla($fs: 8rem, $fw: 700);
     color: $color-not-white;
     margin-top: 0.75rem;
     text-align: center;
+
+    @media(max-width: 999px) {
+        font-size: 5rem !important;
+    }
+
+    @media(max-width: 399px) {
+        font-size: 3rem !important;
+    }
 }
 
 .content-bg {
